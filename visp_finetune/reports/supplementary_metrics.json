@@ -1,0 +1,26 @@
+{
+  "identity": {
+    "mean_normalized_levenshtein": 0.0,
+    "digit_change_flags": 0,
+    "negation_change_flags": 0,
+    "latency_ms_p50": 0.0,
+    "latency_ms_p95": 0.0,
+    "raw_output_differs_from_fallback": 0
+  },
+  "visp_base": {
+    "mean_normalized_levenshtein": 0.1903400772668147,
+    "digit_change_flags": 0,
+    "negation_change_flags": 13,
+    "latency_ms_p50": 452.2018074999892,
+    "latency_ms_p95": 835.9982353499616,
+    "raw_output_differs_from_fallback": 0
+  },
+  "visp_full": {
+    "mean_normalized_levenshtein": 0.02223616954334279,
+    "digit_change_flags": 0,
+    "negation_change_flags": 1,
+    "latency_ms_p50": 439.731644500057,
+    "latency_ms_p95": 858.345515249959,
+    "raw_output_differs_from_fallback": 0
+  }
+}

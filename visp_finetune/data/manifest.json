@@ -1,0 +1,42 @@
+{
+  "snapshot_sha256": "bcd553479c4d153815c47a37f0af1af2bf2a9412f8cb5e783fa0bbee089cbdd1",
+  "source_split_sha256": "d1fca628f3699e58d1bc669601b213061739b10883c48ad87caedf114fe2bb2b",
+  "counts": {
+    "train": {
+      "n": 697,
+      "changed": 221
+    },
+    "dev": {
+      "n": 141,
+      "changed": 73
+    },
+    "test": {
+      "n": 150,
+      "changed": 44
+    }
+  },
+  "files": {
+    "train.jsonl": "f53b9e96a930d0c0009d6d4b75e836321b4948b5bdf9a74a5bc8d89ff56dac1c",
+    "dev.jsonl": "2a6106eeb4b042bea5664277c9f04b7a141189b511adf398a25f73569f62d0f3",
+    "test.jsonl": "44561f6be3eed5bd29c68073d7e939a48b0e2cf541a1a9c332c0a1988304ae87"
+  },
+  "config": {
+    "seed": 42,
+    "learning_rates": [
+      1e-05,
+      3e-05
+    ],
+    "epochs": 6,
+    "patience": 2,
+    "batch_size": 2,
+    "accumulation": 8,
+    "epoch_draws": 952,
+    "max_tokens": 512,
+    "weight_decay": 0.01,
+    "warmup_ratio": 0.1,
+    "num_beams": 5,
+    "max_new_tokens": 512,
+    "precision": "float32",
+    "method": "full_finetune"
+  }
+}

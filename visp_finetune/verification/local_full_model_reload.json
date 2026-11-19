@@ -1,0 +1,7 @@
+{
+  "local_device": "cpu",
+  "local_torch": "2.6.0+cpu",
+  "n": 3,
+  "same_raw_outputs_as_kaggle": 3,
+  "successful_generation": true
+}

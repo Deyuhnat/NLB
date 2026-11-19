@@ -1,0 +1,250 @@
+[
+  {
+    "sample_id": "novel-1c5648ad5c407c44c8879703-p06s01",
+    "reason": "pilot"
+  },
+  {
+    "sample_id": "novel-1c5648ad5c407c44c8879703-p07s01",
+    "reason": "pilot"
+  },
+  {
+    "sample_id": "novel-1c5648ad5c407c44c8879703-p12s01",
+    "reason": "pilot"
+  },
+  {
+    "sample_id": "novel-1c5648ad5c407c44c8879703-p13s01",
+    "reason": "pilot"
+  },
+  {
+    "sample_id": "novel-1c5648ad5c407c44c8879703-p14s01",
+    "reason": "pilot"
+  },
+  {
+    "sample_id": "novel-3946bffc34151fec71382c80-p04s02",
+    "reason": "pilot"
+  },
+  {
+    "sample_id": "novel-3946bffc34151fec71382c80-p06s01",
+    "reason": "pilot"
+  },
+  {
+    "sample_id": "novel-3946bffc34151fec71382c80-p07s01",
+    "reason": "pilot"
+  },
+  {
+    "sample_id": "novel-3946bffc34151fec71382c80-p09s01",
+    "reason": "pilot"
+  },
+  {
+    "sample_id": "novel-3946bffc34151fec71382c80-p13s01",
+    "reason": "pilot"
+  },
+  {
+    "sample_id": "novel-479f925548c4376205f765e6-p03s03",
+    "reason": "pilot"
+  },
+  {
+    "sample_id": "novel-479f925548c4376205f765e6-p04s01",
+    "reason": "pilot"
+  },
+  {
+    "sample_id": "novel-479f925548c4376205f765e6-p04s02",
+    "reason": "pilot"
+  },
+  {
+    "sample_id": "novel-479f925548c4376205f765e6-p05s01",
+    "reason": "pilot"
+  },
+  {
+    "sample_id": "novel-479f925548c4376205f765e6-p05s02",
+    "reason": "pilot"
+  },
+  {
+    "sample_id": "novel-50b42c42aaff9dc481cd7d82-p04s01",
+    "reason": "pilot"
+  },
+  {
+    "sample_id": "novel-50b42c42aaff9dc481cd7d82-p06s01",
+    "reason": "pilot"
+  },
+  {
+    "sample_id": "novel-50b42c42aaff9dc481cd7d82-p09s01",
+    "reason": "pilot"
+  },
+  {
+    "sample_id": "novel-50b42c42aaff9dc481cd7d82-p12s01",
+    "reason": "pilot"
+  },
+  {
+    "sample_id": "novel-50b42c42aaff9dc481cd7d82-p13s01",
+    "reason": "pilot"
+  },
+  {
+    "sample_id": "novel-5b1494e5389b03838fafc7ae-p05s01",
+    "reason": "Cụm cố nhân của một bộ sư sĩ quái vật có thể là tham chiếu tác phẩm, cần nguồn để diễn đạt lại chính xác."
+  },
+  {
+    "sample_id": "novel-5b1494e5389b03838fafc7ae-p09s01",
+    "reason": "Cụm hệ thống ra dáng hành chính chưa rõ nghĩa; giữ nguyên, không tự đổi chức năng hệ thống."
+  },
+  {
+    "sample_id": "novel-5ec66dfb04592c8884622272-p01s01",
+    "reason": "Cụm Đại bàng uất thở ở bờ vực suối chưa rõ là địa danh hay miêu tả; giữ nguyên để đối chiếu nguồn."
+  },
+  {
+    "sample_id": "novel-5ec66dfb04592c8884622272-p10s01",
+    "reason": "Câu gốc thiếu đối tượng được cho phép; giữ chấp thuận không bổ sung hành động cụ thể, cần đối chiếu nguồn về quy chiếu nhân vật."
+  },
+  {
+    "sample_id": "novel-602a3dceb9db36484f06635c-p12s01",
+    "reason": "Khẩu quyết có cụm chẳng vương đầy chưa rõ nghĩa; không tự diễn giải hoặc cắt mất ý."
+  },
+  {
+    "sample_id": "novel-8108e9fa4bae8d853abe7ead-p03s01",
+    "reason": "pilot"
+  },
+  {
+    "sample_id": "novel-8108e9fa4bae8d853abe7ead-p06s01",
+    "reason": "pilot"
+  },
+  {
+    "sample_id": "novel-8108e9fa4bae8d853abe7ead-p10s02",
+    "reason": "pilot"
+  },
+  {
+    "sample_id": "novel-8108e9fa4bae8d853abe7ead-p12s01",
+    "reason": "pilot"
+  },
+  {
+    "sample_id": "novel-8108e9fa4bae8d853abe7ead-p14s01",
+    "reason": "pilot"
+  },
+  {
+    "sample_id": "novel-87e870a5d075f23edf3f25fc-p12s01",
+    "reason": "pilot"
+  },
+  {
+    "sample_id": "novel-8a49e9e99bafb387f467d172-p01s01",
+    "reason": "Tên Ngũ hùng, Kim Thủy và cụm sắp cho cần đối chiếu nguồn; chỉ sửa cú pháp, không thay theo Tây Du."
+  },
+  {
+    "sample_id": "novel-9b55a12309b3b543c07fe143-p05s01",
+    "reason": "pilot"
+  },
+  {
+    "sample_id": "novel-9b55a12309b3b543c07fe143-p09s01",
+    "reason": "pilot"
+  },
+  {
+    "sample_id": "novel-9b55a12309b3b543c07fe143-p10s01",
+    "reason": "pilot"
+  },
+  {
+    "sample_id": "novel-9b55a12309b3b543c07fe143-p16s01",
+    "reason": "pilot"
+  },
+  {
+    "sample_id": "novel-9b55a12309b3b543c07fe143-p17s01",
+    "reason": "pilot"
+  },
+  {
+    "sample_id": "novel-a5cc55d099d119e550ea8ddc-p03s01",
+    "reason": "pilot"
+  },
+  {
+    "sample_id": "novel-a5cc55d099d119e550ea8ddc-p06s01",
+    "reason": "pilot"
+  },
+  {
+    "sample_id": "novel-a5cc55d099d119e550ea8ddc-p11s01",
+    "reason": "pilot"
+  },
+  {
+    "sample_id": "novel-a5cc55d099d119e550ea8ddc-p13s01",
+    "reason": "pilot"
+  },
+  {
+    "sample_id": "novel-a5cc55d099d119e550ea8ddc-p14s01",
+    "reason": "pilot"
+  },
+  {
+    "sample_id": "novel-b823a92e37e514e0d0d610aa-p03s01",
+    "reason": "pilot"
+  },
+  {
+    "sample_id": "novel-b823a92e37e514e0d0d610aa-p04s01",
+    "reason": "pilot"
+  },
+  {
+    "sample_id": "novel-b823a92e37e514e0d0d610aa-p10s01",
+    "reason": "pilot"
+  },
+  {
+    "sample_id": "novel-c5256e5c10a477edbb32e6dc-p04s01",
+    "reason": "pilot"
+  },
+  {
+    "sample_id": "novel-c5256e5c10a477edbb32e6dc-p05s01",
+    "reason": "pilot"
+  },
+  {
+    "sample_id": "novel-c5256e5c10a477edbb32e6dc-p09s03",
+    "reason": "pilot"
+  },
+  {
+    "sample_id": "novel-c5256e5c10a477edbb32e6dc-p12s01",
+    "reason": "pilot"
+  },
+  {
+    "sample_id": "novel-c5256e5c10a477edbb32e6dc-p16s01",
+    "reason": "pilot"
+  },
+  {
+    "sample_id": "novel-c7a46eb04756abda83eb3388-p01s01",
+    "reason": "pilot"
+  },
+  {
+    "sample_id": "novel-c7a46eb04756abda83eb3388-p02s01",
+    "reason": "pilot"
+  },
+  {
+    "sample_id": "novel-c7a46eb04756abda83eb3388-p03s01",
+    "reason": "pilot"
+  },
+  {
+    "sample_id": "novel-c7a46eb04756abda83eb3388-p03s02",
+    "reason": "pilot"
+  },
+  {
+    "sample_id": "novel-c7a46eb04756abda83eb3388-p05s01",
+    "reason": "pilot"
+  },
+  {
+    "sample_id": "novel-d37fc3bfd991895ff4003f17-p04s01",
+    "reason": "pilot"
+  },
+  {
+    "sample_id": "novel-e40be4f8dddd02ca6c8db63a-p01s03",
+    "reason": "Câu hỏi \"bạn làm thế nào\" thiếu rõ nghĩa, ngữ cảnh dịch lỗi; giữ câu gốc để tránh đoán ý. Cần đối chiếu nguyên tác."
+  },
+  {
+    "sample_id": "novel-e40be4f8dddd02ca6c8db63a-p04s03",
+    "reason": "Chỉ sửa cú pháp, giữ các tên được cung cấp; Ngọc Mạt và quan hệ sự việc cần đối chiếu nguồn, không tự thay theo bản Tây Du quen thuộc."
+  },
+  {
+    "sample_id": "novel-edf887224c631f06b41d4db0-p02s01",
+    "reason": "Câu nguồn lỗi chủ ngữ và cụm bó tay vào lưỡi lê; sửa tối thiểu theo tình huống sợ hãi, cần đối chiếu nguồn về vũ khí."
+  },
+  {
+    "sample_id": "novel-edf887224c631f06b41d4db0-p03s02",
+    "reason": "Chỉ sửa ngữ pháp nuốt nước bọt và hít sâu. Lời thoại tiếp nối \"Đó là tiếng nói... có thể là con quỷ bị ép xuống\" chưa rõ nghĩa, tên nhân vật và cách xưng hô cần đối chiếu nguồn."
+  },
+  {
+    "sample_id": "novel-edf887224c631f06b41d4db0-p03s04",
+    "reason": "Sửa câu chữ, giữ đường núi, mẹ và Tây Tạng; ý tôi theo mẹ tôi chưa rõ cần đối chiếu nguồn."
+  },
+  {
+    "sample_id": "novel-f391cd6a8f483f46eb8e8a43-p08s01",
+    "reason": "Đã dịch Tonight thành Đêm nay và làm gọn cú pháp; giữ tên Sơn Ngộ Không, roi vàng theo dữ liệu. Cần kiểm tra tên và binh khí với nguyên tác, không tự thay bằng chi tiết truyện quen thuộc."
+  }
+]

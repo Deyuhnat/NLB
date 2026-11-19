@@ -1,0 +1,12 @@
+{
+  "visp_base": {
+    "changed_confirmed": 128,
+    "harmful_changed": 95,
+    "harm_given_change": 0.7421875
+  },
+  "visp_full": {
+    "changed_confirmed": 57,
+    "harmful_changed": 39,
+    "harm_given_change": 0.6842105263157895
+  }
+}

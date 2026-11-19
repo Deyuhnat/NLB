@@ -1,0 +1,41 @@
+{
+  "lr": 3e-05,
+  "best_dev_loss": 0.6816444994558019,
+  "best_epoch": 1,
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.45677756823935867,
+      "dev": {
+        "changed": 1.3367973130247364,
+        "identity": 0.026491685886867344,
+        "balanced": 0.6816444994558019
+      },
+      "seconds": 76.85268487400003
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.2427110702362882,
+      "dev": {
+        "changed": 1.5925377534370717,
+        "identity": 0.026814298314788817,
+        "balanced": 0.8096760258759302
+      },
+      "seconds": 77.241632332
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.14723178465848694,
+      "dev": {
+        "changed": 1.7275846146863618,
+        "identity": 0.016323387737536582,
+        "balanced": 0.8719540012119492
+      },
+      "seconds": 77.08771447200002
+    }
+  ],
+  "batch": 2,
+  "accum": 8,
+  "method": "full_finetune",
+  "model_dir": "runs/lr_3e-05/best"
+}

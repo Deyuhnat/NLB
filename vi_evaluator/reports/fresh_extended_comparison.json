@@ -1,0 +1,289 @@
+{
+  "systems": {
+    "base_top1": {
+      "n": 240,
+      "changes": 220,
+      "mean_fluency_proxy": 0.12247549692789714,
+      "mean_semantic_proxy": 0.915185420861455
+    },
+    "finetuned_top1": {
+      "n": 240,
+      "changes": 103,
+      "mean_fluency_proxy": -0.00362030565738678,
+      "mean_semantic_proxy": 0.976883281293533
+    },
+    "identity": {
+      "n": 240,
+      "changes": 0,
+      "mean_fluency_proxy": 0.0,
+      "mean_semantic_proxy": 0.9999999968000072
+    },
+    "legacy_M1_base_pool": {
+      "n": 240,
+      "changes": 52,
+      "mean_fluency_proxy": 0.04755197564760844,
+      "mean_semantic_proxy": 0.9966723766453733
+    },
+    "new_evaluator_base_pool": {
+      "n": 240,
+      "changes": 0,
+      "mean_fluency_proxy": 0.0,
+      "mean_semantic_proxy": 0.9999999968000071
+    },
+    "new_evaluator_rerank": {
+      "n": 240,
+      "changes": 0,
+      "mean_fluency_proxy": 0.0,
+      "mean_semantic_proxy": 0.9999999968000072
+    },
+    "no_visp_base_pool": {
+      "n": 240,
+      "changes": 0,
+      "mean_fluency_proxy": 0.0,
+      "mean_semantic_proxy": 0.9999999968000071
+    }
+  },
+  "per_category": {
+    "Huyền huyễn": {
+      "base_top1": {
+        "n": 80,
+        "changes": 73,
+        "mean_fluency_proxy": 0.13556689023971558,
+        "mean_semantic_proxy": 0.9108040350083705
+      },
+      "finetuned_top1": {
+        "n": 80,
+        "changes": 33,
+        "mean_fluency_proxy": -0.03263470828533173,
+        "mean_semantic_proxy": 0.9759318208972434
+      },
+      "identity": {
+        "n": 80,
+        "changes": 0,
+        "mean_fluency_proxy": 0.0,
+        "mean_semantic_proxy": 1.0000000036090146
+      },
+      "legacy_M1_base_pool": {
+        "n": 80,
+        "changes": 20,
+        "mean_fluency_proxy": 0.024391376972198488,
+        "mean_semantic_proxy": 0.9964053530331091
+      },
+      "new_evaluator_base_pool": {
+        "n": 80,
+        "changes": 0,
+        "mean_fluency_proxy": 0.0,
+        "mean_semantic_proxy": 1.0000000036090146
+      },
+      "new_evaluator_rerank": {
+        "n": 80,
+        "changes": 0,
+        "mean_fluency_proxy": 0.0,
+        "mean_semantic_proxy": 1.0000000036090146
+      },
+      "no_visp_base_pool": {
+        "n": 80,
+        "changes": 0,
+        "mean_fluency_proxy": 0.0,
+        "mean_semantic_proxy": 1.0000000036090146
+      }
+    },
+    "Kỳ ảo": {
+      "base_top1": {
+        "n": 80,
+        "changes": 76,
+        "mean_fluency_proxy": 0.1534810721874237,
+        "mean_semantic_proxy": 0.9044379413250713
+      },
+      "finetuned_top1": {
+        "n": 80,
+        "changes": 36,
+        "mean_fluency_proxy": 0.011768749356269837,
+        "mean_semantic_proxy": 0.97855340579513
+      },
+      "identity": {
+        "n": 80,
+        "changes": 0,
+        "mean_fluency_proxy": 0.0,
+        "mean_semantic_proxy": 0.9999999969694656
+      },
+      "legacy_M1_base_pool": {
+        "n": 80,
+        "changes": 16,
+        "mean_fluency_proxy": 0.0635950893163681,
+        "mean_semantic_proxy": 0.9976392356671925
+      },
+      "new_evaluator_base_pool": {
+        "n": 80,
+        "changes": 0,
+        "mean_fluency_proxy": 0.0,
+        "mean_semantic_proxy": 0.9999999969694656
+      },
+      "new_evaluator_rerank": {
+        "n": 80,
+        "changes": 0,
+        "mean_fluency_proxy": 0.0,
+        "mean_semantic_proxy": 0.9999999969694656
+      },
+      "no_visp_base_pool": {
+        "n": 80,
+        "changes": 0,
+        "mean_fluency_proxy": 0.0,
+        "mean_semantic_proxy": 0.9999999969694656
+      }
+    },
+    "Tiên hiệp": {
+      "base_top1": {
+        "n": 80,
+        "changes": 71,
+        "mean_fluency_proxy": 0.07837852835655212,
+        "mean_semantic_proxy": 0.9303142862509233
+      },
+      "finetuned_top1": {
+        "n": 80,
+        "changes": 34,
+        "mean_fluency_proxy": 0.01000504195690155,
+        "mean_semantic_proxy": 0.9761646171882254
+      },
+      "identity": {
+        "n": 80,
+        "changes": 0,
+        "mean_fluency_proxy": 0.0,
+        "mean_semantic_proxy": 0.9999999898215413
+      },
+      "legacy_M1_base_pool": {
+        "n": 80,
+        "changes": 16,
+        "mean_fluency_proxy": 0.05466946065425873,
+        "mean_semantic_proxy": 0.9959725412358187
+      },
+      "new_evaluator_base_pool": {
+        "n": 80,
+        "changes": 0,
+        "mean_fluency_proxy": 0.0,
+        "mean_semantic_proxy": 0.999999989821541
+      },
+      "new_evaluator_rerank": {
+        "n": 80,
+        "changes": 0,
+        "mean_fluency_proxy": 0.0,
+        "mean_semantic_proxy": 0.9999999898215413
+      },
+      "no_visp_base_pool": {
+        "n": 80,
+        "changes": 0,
+        "mean_fluency_proxy": 0.0,
+        "mean_semantic_proxy": 0.999999989821541
+      }
+    }
+  },
+  "paired_comparisons": [
+    {
+      "left": "new_evaluator_base_pool",
+      "right": "no_visp_base_pool",
+      "fluency": {
+        "paired_mean_delta": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "resampling_unit": "work",
+        "works": 12,
+        "bootstrap_replicates": 2000,
+        "scope": "automatic proxy only"
+      },
+      "semantic": {
+        "paired_mean_delta": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "resampling_unit": "work",
+        "works": 12,
+        "bootstrap_replicates": 2000,
+        "scope": "automatic proxy only"
+      }
+    },
+    {
+      "left": "new_evaluator_base_pool",
+      "right": "base_top1",
+      "fluency": {
+        "paired_mean_delta": -0.12247549692789715,
+        "ci95": [
+          -0.18156336831549807,
+          -0.06525685849289099
+        ],
+        "resampling_unit": "work",
+        "works": 12,
+        "bootstrap_replicates": 2000,
+        "scope": "automatic proxy only"
+      },
+      "semantic": {
+        "paired_mean_delta": 0.08481457593855213,
+        "ci95": [
+          0.07212458138349029,
+          0.09692734197708788
+        ],
+        "resampling_unit": "work",
+        "works": 12,
+        "bootstrap_replicates": 2000,
+        "scope": "automatic proxy only"
+      }
+    },
+    {
+      "left": "new_evaluator_rerank",
+      "right": "finetuned_top1",
+      "fluency": {
+        "paired_mean_delta": 0.0036203056573867825,
+        "ci95": [
+          -0.026095571393767992,
+          0.037543798262874274
+        ],
+        "resampling_unit": "work",
+        "works": 12,
+        "bootstrap_replicates": 2000,
+        "scope": "automatic proxy only"
+      },
+      "semantic": {
+        "paired_mean_delta": 0.023116715506474216,
+        "ci95": [
+          0.016742344939107305,
+          0.029896487788992555
+        ],
+        "resampling_unit": "work",
+        "works": 12,
+        "bootstrap_replicates": 2000,
+        "scope": "automatic proxy only"
+      }
+    },
+    {
+      "left": "new_evaluator_base_pool",
+      "right": "legacy_M1_base_pool",
+      "fluency": {
+        "paired_mean_delta": -0.047551975647608435,
+        "ci95": [
+          -0.071489752655228,
+          -0.02844697639346124
+        ],
+        "resampling_unit": "work",
+        "works": 12,
+        "bootstrap_replicates": 2000,
+        "scope": "automatic proxy only"
+      },
+      "semantic": {
+        "paired_mean_delta": 0.0033276201546337506,
+        "ci95": [
+          0.002439516244550089,
+          0.0043129416272435234
+        ],
+        "resampling_unit": "work",
+        "works": 12,
+        "bootstrap_replicates": 2000,
+        "scope": "automatic proxy only"
+      }
+    }
+  ],
+  "label_origin": "automatic_proxy",
+  "human_validated": false,
+  "warning": "Shared teacher supervision makes this an automatic study; human confirmation remains pending. Base-pool comparisons use identical candidates. Rerank with finetuned options uses an expanded pool."
+}

@@ -1,0 +1,28 @@
+BÀN GIAO VIETNAMESE EVALUATOR
+
+Bộ dữ liệu gồm 1.050 câu đã được nhóm review
+
+Model này chấm câu, dùng kèm model ViSP sinh câu đã bàn giao trước đó.
+Foundation: 365.311 cặp train ViSP hợp lệ. Adaptation: 697 nguồn train nhóm,
+141 dev, 150 test lịch sử. Đã đánh giá tự động trên 240 câu từ 12 truyện mới.
+
+Có trong gói:
+- checkpoint/: encoder, heads, gate và model card.
+- inference.py, api.py, requirements.txt, README.md: chạy chấm/API.
+- examples/: ví dụ input tự tạo, không phải benchmark.
+- reports/: báo cáo HTML, metrics, dữ liệu đánh giá tự động và giới hạn.
+- training_proof/: bằng chứng huấn luyện.
+- training_source/: source và notebook tái huấn luyện, kèm dữ liệu nhóm đã khóa.
+- verification/: kiểm tra model thật, API và nguồn Kaggle.
+
+Đọc README.md và reports/BAO_CAO_BAN_GIAO.html trước khi tích hợp.
+Gate hiện tại sửa 0 nguồn dev; ngưỡng=1000000000.0.
+Các điểm là proxy tự động, chưa có xác nhận độc lập bởi người đọc.
+JFLEG/SEEDA là cơ sở thiết kế đánh giá, không phải tên hai model được retrain.
+
+Kaggle version: 371052411
+
+GIỚI HẠN CHẤT LƯỢNG: Head semantic chưa vượt baseline hằng trên test.
+Không khuyến nghị dùng evaluator này làm metric chính ở phiên bản hiện tại.
+Gate giữ câu gốc trên toàn bộ dev và test mới. teacher.py cung cấp điểm
+tham chiếu tự động; các điểm này vẫn chưa được người đọc xác nhận.

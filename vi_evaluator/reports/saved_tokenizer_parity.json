@@ -1,0 +1,25 @@
+{
+  "transformers_version": "4.57.3",
+  "tokenizers_version": "0.22.2",
+  "backend_model": "Unigram",
+  "stages": {
+    "stage_a/complete": {
+      "texts_checked": 4050,
+      "token_mismatches": 0,
+      "mismatch_indices": [],
+      "serialized_backend_equal": true
+    },
+    "stage_b/best": {
+      "texts_checked": 4050,
+      "token_mismatches": 0,
+      "mismatch_indices": [],
+      "serialized_backend_equal": true
+    },
+    "stage_b_no_visp/best": {
+      "texts_checked": 4050,
+      "token_mismatches": 0,
+      "mismatch_indices": [],
+      "serialized_backend_equal": true
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "visp_full": {
+    "punctuation_only": 25,
+    "wording_or_structure": 4,
+    "semantic_change": 10
+  },
+  "visp_base": {
+    "semantic_change": 77,
+    "wording_or_structure": 9,
+    "punctuation_only": 9
+  }
+}

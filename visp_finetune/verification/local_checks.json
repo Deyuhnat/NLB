@@ -1,0 +1,35 @@
+{
+  "data_counts": {
+    "train": {
+      "n": 697,
+      "changed": 221
+    },
+    "dev": {
+      "n": 141,
+      "changed": 73
+    },
+    "test": {
+      "n": 150,
+      "changed": 44
+    }
+  },
+  "local_tests_passed": 7,
+  "tiny_model_smoke": {
+    "loss": 4.768925666809082,
+    "parameter_tensors": 26,
+    "gradient_tensors": 26,
+    "changed_sentinels": 26,
+    "trainable_parameters": 59744,
+    "all_parameters_trainable": true,
+    "reload_logits_equal": true,
+    "resume_next_step_equal": true,
+    "scope": "synthetic tiny T5 only; not ViSP training",
+    "device": "cpu"
+  },
+  "visp_training_status": "full_finetune_complete_on_kaggle_v2",
+  "database_writes": false,
+  "status": "complete",
+  "completed": true,
+  "selected_lr": 1e-05,
+  "selected_epoch": 1
+}

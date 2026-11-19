@@ -1,0 +1,82 @@
+[
+  {
+    "file": "cases.json",
+    "bytes": 429351,
+    "sha256": "db6a3af5768536b71fc0041876dcf64761d2aecaa95da59394451b03119252af"
+  },
+  {
+    "file": "edit_judgments.jsonl",
+    "bytes": 250707,
+    "sha256": "28f4c3937750661c0cba039a199b4d5d78d5e59702c545bc1f462ab5dcc44445"
+  },
+  {
+    "file": "edit_metrics.json",
+    "bytes": 372,
+    "sha256": "05bcb9180520eeeadf4e09c921a21ae7ea0beb13fd11bca684ad96f1d5d055b1"
+  },
+  {
+    "file": "harm_breakdown.json",
+    "bytes": 226,
+    "sha256": "515e56228d310e5164f08a4fd4466a76cc29408173aa0bf72aedc212b5002f5a"
+  },
+  {
+    "file": "intervention_analysis.json",
+    "bytes": 249,
+    "sha256": "3f360563512074eaf43e9d0bb2ff9f5c8d67b6db4216a7f33816d509b3b8f6bb"
+  },
+  {
+    "file": "KET_QUA_DANH_GIA.html",
+    "bytes": 5838,
+    "sha256": "bdc3ef09ad6b4fc2c51fb51c17a840020e40533e8a9e93a31ad13e3b777dd561"
+  },
+  {
+    "file": "KET_QUA_DANH_GIA.md",
+    "bytes": 6006,
+    "sha256": "2af3ab9c9bdbdc070178200869d4e3fe1ece0e79fc64311a27c293e598c027e6"
+  },
+  {
+    "file": "ledger.json",
+    "bytes": 89292,
+    "sha256": "88eda5ec2c2633cb0dd871f1e7976dcae7d3ff95a2fcb18fd233b177a7f57092"
+  },
+  {
+    "file": "matched_sentence_metrics.json",
+    "bytes": 690,
+    "sha256": "ed85f3c0d3173bbbe03549660fc87bb6fa9a5b7c031ce29217868856e0445b16"
+  },
+  {
+    "file": "review_notes.jsonl",
+    "bytes": 107305,
+    "sha256": "aca6acf72ceabd909e71ddf7e4a72beb120ecb31e85f933e8a22a4e7676b86b3"
+  },
+  {
+    "file": "RUBRIC.md",
+    "bytes": 4543,
+    "sha256": "a8c7ac6b2821baf3c5eacdbd11a890c39f0fd0a42d2f037af57e708278032db3"
+  },
+  {
+    "file": "sentence_comparison.png",
+    "bytes": 63133,
+    "sha256": "0edc430186aa4f6f1fdf7d93c9e4c7aa50b176ff7dc1282dcc9bd67ec4136dd6"
+  },
+  {
+    "file": "sentence_judgments.jsonl",
+    "bytes": 394908,
+    "sha256": "4bad5f23ed57c3e02ff5a4944174c8ba94f8111d98b6d98495e5c1f3a1acb1d3"
+  },
+  {
+    "file": "sentence_metrics.json",
+    "bytes": 696,
+    "sha256": "704e95afc9d8e868a7a83888f88fc2abc41c72337994dd69544abdc8c897e589"
+  },
+  {
+    "file": "summary.json",
+    "bytes": 1816,
+    "sha256": "6f4ae6e40517e361c3f3158b783ecf213f5a944c1124485430fc81dc5424ac3a"
+  },
+  {
+    "file": "verification.json",
+    "bytes": 448,
+    "sha256": "528434f2a4913489ed7da99ba93032d2b58dc5ba390de831545dbe7df4d92876"
+  }
+]

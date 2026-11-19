@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "valid_status": 200,
+  "empty_status": 422,
+  "overlength_status": 422,
+  "response": {
+    "rank_score": -0.3527379035949707,
+    "fluency_delta_proxy": 0.06670957058668137,
+    "semantic_preservation_proxy": 0.7771838903427124,
+    "grammar_score": null,
+    "evaluator_version": "7b45b3a236b099d7",
+    "context_used": false,
+    "human_validated": false,
+    "label_origin": "automatic_proxy_and_legacy_inferred_preference",
+    "score_contract": "raw rank; fluency=NLL(source)-NLL(candidate) proxy; semantic=frozen teacher cosine proxy; no 0-100 human calibration",
+    "latency_seconds_per_pair": 0.04308079999918846,
+    "latency_scope": "model_forward_excludes_tokenization"
+  },
+  "endpoint": "POST /score",
+  "scope": "actual trained model over local HTTP",
+  "human_validated": false
+}

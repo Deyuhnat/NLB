@@ -1,0 +1,8 @@
+{
+  "n": 150,
+  "weak_choice_match": 0.7066666666666667,
+  "changed": 0,
+  "status": "retrospective historical test; previous experiments have inspected these sources; not a new independent test",
+  "label_origin": "legacy_inferred_preference",
+  "human_validated": false
+}

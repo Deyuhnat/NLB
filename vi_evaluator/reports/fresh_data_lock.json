@@ -1,0 +1,14 @@
+{
+  "test_sources": 240,
+  "test_works": 12,
+  "pilot_sources": 30,
+  "pilot_works": 3,
+  "excluded_prior_sources": 1320,
+  "excluded_prior_works": 45,
+  "no_model_outputs_existed_at_sampling": true,
+  "created_utc": "2026-11-18T08:04:48.849654+00:00",
+  "files": {
+    "data/fresh_pilot.jsonl": "da68c027d624bb902c1efd9a746c371869b8924a16464e1ace52bd9635d4340f",
+    "data/fresh_test.jsonl": "41ac3386a68dddb4f2e5f79b411169b8e3741c6834e9524b5db0ec61cff064bc"
+  }
+}

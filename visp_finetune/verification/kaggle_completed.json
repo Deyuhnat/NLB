@@ -1,0 +1,22 @@
+{
+  "url": "https://www.kaggle.com/code/nettopro/visp-full-fine-tune-nlp501/log?scriptVersionId=370624086",
+  "run_id": 370624086,
+  "version": 2,
+  "status": "COMPLETE",
+  "is_private": true,
+  "gpu_enabled": true,
+  "accelerator": "NVIDIA_TESLA_T4",
+  "date_created": "2026-11-17T10:25:57.297Z",
+  "date_evaluated": "2026-11-17T10:25:58.523Z",
+  "run_info": {
+    "dockerfileUrl": "https://github.com/Kaggle/docker-python/blob/main/Dockerfile.tmpl",
+    "dockerHubUrl": "https://gcr.io/kaggle-gpu-images/python@sha256:de153e6d303881930c51286216393d56f56b26458d0661350305a1e8144eea01",
+    "dockerImageDigest": "de153e6d303881930c51286216393d56f56b26458d0661350305a1e8144eea01",
+    "dockerImageId": "sha256:d2bc7566fd2103ef9a956d84c9c2a21436a97d822ce3b1a2487e8f3d8b89e242",
+    "dockerImageName": "gcr.io/kaggle-gpu-images/python@sha256:de153e6d303881930c51286216393d56f56b26458d0661350305a1e8144eea01",
+    "outputSizeBytes": 7243644293,
+    "runTimeSeconds": 749.1629391,
+    "succeeded": true
+  },
+  "output_files": 43
+}

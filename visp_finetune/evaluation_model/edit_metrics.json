@@ -1,0 +1,17 @@
+{
+  "visp_base": {
+    "performed": 420,
+    "accepted": 142,
+    "rejected": 277,
+    "uncertain": 1,
+    "confirmed_precision": 0.33890214797136037,
+    "edit_precision": null
+  },
+  "visp_full": {
+    "performed": 95,
+    "accepted": 28,
+    "rejected": 67,
+    "confirmed_precision": 0.29473684210526313,
+    "edit_precision": 0.29473684210526313
+  }
+}

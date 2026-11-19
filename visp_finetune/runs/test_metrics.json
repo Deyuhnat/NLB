@@ -1,0 +1,101 @@
+{
+  "identity": {
+    "all": {
+      "n": 150,
+      "chrf_pp": 92.56491422556805,
+      "exact_n": 106,
+      "exact_match": 0.7066666666666667,
+      "intervention": 0.0,
+      "generation_failures": 0
+    },
+    "changed": {
+      "n": 44,
+      "chrf_pp": 77.76169915982291,
+      "exact_n": 0,
+      "exact_match": 0.0,
+      "intervention": 0.0,
+      "generation_failures": 0
+    },
+    "identity": {
+      "n": 106,
+      "chrf_pp": 100.0,
+      "exact_n": 106,
+      "exact_match": 1.0,
+      "intervention": 0.0,
+      "generation_failures": 0
+    },
+    "chrf_signature": "nrefs:1|case:mixed|eff:yes|nc:6|nw:2|space:no|version:2.5.1",
+    "quality_judgments": {
+      "safe_improvement": null,
+      "harm": null,
+      "clean_harm": null,
+      "status": "pending"
+    }
+  },
+  "visp_base": {
+    "all": {
+      "n": 150,
+      "chrf_pp": 76.59152855676781,
+      "exact_n": 23,
+      "exact_match": 0.15333333333333332,
+      "intervention": 0.86,
+      "generation_failures": 0
+    },
+    "changed": {
+      "n": 44,
+      "chrf_pp": 68.6572305694619,
+      "exact_n": 5,
+      "exact_match": 0.11363636363636363,
+      "intervention": 0.9318181818181818,
+      "generation_failures": 0
+    },
+    "identity": {
+      "n": 106,
+      "chrf_pp": 80.5083201100432,
+      "exact_n": 18,
+      "exact_match": 0.16981132075471697,
+      "intervention": 0.8301886792452831,
+      "generation_failures": 0
+    },
+    "chrf_signature": "nrefs:1|case:mixed|eff:yes|nc:6|nw:2|space:no|version:2.5.1",
+    "quality_judgments": {
+      "safe_improvement": null,
+      "harm": null,
+      "clean_harm": null,
+      "status": "pending"
+    }
+  },
+  "visp_full": {
+    "all": {
+      "n": 150,
+      "chrf_pp": 89.79291665170764,
+      "exact_n": 67,
+      "exact_match": 0.44666666666666666,
+      "intervention": 0.38,
+      "generation_failures": 0
+    },
+    "changed": {
+      "n": 44,
+      "chrf_pp": 75.60093455000607,
+      "exact_n": 1,
+      "exact_match": 0.022727272727272728,
+      "intervention": 0.38636363636363635,
+      "generation_failures": 0
+    },
+    "identity": {
+      "n": 106,
+      "chrf_pp": 96.89967532608064,
+      "exact_n": 66,
+      "exact_match": 0.6226415094339622,
+      "intervention": 0.37735849056603776,
+      "generation_failures": 0
+    },
+    "chrf_signature": "nrefs:1|case:mixed|eff:yes|nc:6|nw:2|space:no|version:2.5.1",
+    "quality_judgments": {
+      "safe_improvement": null,
+      "harm": null,
+      "clean_harm": null,
+      "status": "pending"
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "visp_full": {
+    "total": 149,
+    "eligible": 149,
+    "harm_n": 39,
+    "clean_n": 119,
+    "clean_harm_n": 33,
+    "tie": 107,
+    "loss": 40,
+    "needs_edit_n": 30,
+    "safe_improvement_n": 2,
+    "win": 2,
+    "safe_improvement": 0.06666666666666667,
+    "harm": 0.26174496644295303,
+    "clean_harm": 0.2773109243697479
+  },
+  "visp_base": {
+    "total": 149,
+    "eligible": 149,
+    "harm_n": 95,
+    "clean_n": 119,
+    "clean_harm_n": 77,
+    "tie": 43,
+    "loss": 102,
+    "needs_edit_n": 30,
+    "safe_improvement_n": 3,
+    "win": 4,
+    "safe_improvement": 0.1,
+    "harm": 0.6375838926174496,
+    "clean_harm": 0.6470588235294118
+  }
+}

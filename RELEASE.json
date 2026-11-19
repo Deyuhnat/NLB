@@ -1,0 +1,9 @@
+{
+  "archive": "BAN_GIAO_VISP_VA_EVALUATOR_20261118.zip",
+  "bytes": 1269883113,
+  "sha256": "31d3e74705efa14fbfcafedf4c82466ed09560401319a20476e971ecb08edb8c",
+  "verified_entries": 134,
+  "both_checkpoints_included": true,
+  "human_validated": false,
+  "evaluator_primary_metric_recommended": false
+}

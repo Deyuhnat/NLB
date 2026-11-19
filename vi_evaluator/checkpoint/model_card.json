@@ -1,0 +1,24 @@
+{
+  "stage": "stage_b",
+  "team_train_sources": 697,
+  "team_train_rows": 2670,
+  "team_dev_sources": 141,
+  "epoch": 2,
+  "metrics": {
+    "weak_preference_accuracy": 0.702834004837019,
+    "weighted_preference_denominator": 102.91667008399963,
+    "fluency_proxy_mae": 0.21819785102358405,
+    "semantic_proxy_mae": 0.1608228195388362,
+    "loss": 0.33332356635261984,
+    "label_origin": "automatic_proxy_and_legacy_inferred_preference",
+    "human_validated": false
+  },
+  "encoder_before_sha256": "3bfdd4b4a33260ca5a5e267bca046873997323d109bc97fcf217e44ea79d5aa7",
+  "encoder_after_sha256": "e7c4450c6e4cad62481d5bd357e2f98c07cecf0c74540cf0946edf3c759fbc72",
+  "all_encoder_parameters_trainable": true,
+  "label_origin": "automatic_proxy_and_legacy_inferred_preference",
+  "human_validated": false,
+  "context_used": false,
+  "token_limit": 512,
+  "foundation": "stage A full ViSP train epoch"
+}

@@ -1,0 +1,192 @@
+{
+  "status": "COMPLETE",
+  "run_id": 370624086,
+  "is_private": true,
+  "files": [
+    {
+      "file": "data/dev.jsonl",
+      "bytes": 155434,
+      "sha256": "2a6106eeb4b042bea5664277c9f04b7a141189b511adf398a25f73569f62d0f3"
+    },
+    {
+      "file": "data/excluded.json",
+      "bytes": 7625,
+      "sha256": "d45112310631d0a34a8c2e6d086f6662d3bd9df9201b8b924911f4e65f515b38"
+    },
+    {
+      "file": "data/manifest.json",
+      "bytes": 1064,
+      "sha256": "40b13831ac9f1fb1ae3b693831793c6f072e9559596b9f751abf19a1bbab40d5"
+    },
+    {
+      "file": "data/test.jsonl",
+      "bytes": 179479,
+      "sha256": "44561f6be3eed5bd29c68073d7e939a48b0e2cf541a1a9c332c0a1988304ae87"
+    },
+    {
+      "file": "data/train.jsonl",
+      "bytes": 880381,
+      "sha256": "f53b9e96a930d0c0009d6d4b75e836321b4948b5bdf9a74a5bc8d89ff56dac1c"
+    },
+    {
+      "file": "verification/remote_source/full_finetune.py",
+      "bytes": 23772,
+      "sha256": "f9a3cecd97d05b2270dda2503d754b0c0fa6e219a0e20de39f9f02614c45e90e"
+    },
+    {
+      "file": "verification/remote_source/requirements.txt",
+      "bytes": 62,
+      "sha256": "c8b6dd4dc62d81eb3ffd0448d5a8b6de3e50fd2bdf2d16cf28a0de003c22df6a"
+    },
+    {
+      "file": "runs/base_revision.json",
+      "bytes": 104,
+      "sha256": "9906155d6a927e690e036d6d42b5849761c977c9b5f2ce3ff09ae65c68c3e967"
+    },
+    {
+      "file": "runs/environment.json",
+      "bytes": 593,
+      "sha256": "b41e14607a000a9e548fa61a5217b817434c42132ed476d0f1597f8fb336286a"
+    },
+    {
+      "file": "runs/evaluation/edit_sheet.jsonl",
+      "bytes": 120380,
+      "sha256": "9b18d38419b60d327b4109075c7c89e29542d2b574df4de58476b139b5c45b78"
+    },
+    {
+      "file": "runs/evaluation/private_key.json",
+      "bytes": 33902,
+      "sha256": "568cb823c9c90dbd89d501dce7600d00e7b3e13cfba2c8bd1f9d13a49628856e"
+    },
+    {
+      "file": "runs/evaluation/review_sheet.jsonl",
+      "bytes": 321686,
+      "sha256": "b6f17893695d2ba96baab822ff50808dd29da9378c9f963c92fc7a6c008a9976"
+    },
+    {
+      "file": "runs/lr_1e-05/best/config.json",
+      "bytes": 726,
+      "sha256": "b3a6b3c5e70b4c11b8b020c5377d9e9a16c3ccba6fbc229f82c2d214da03c874"
+    },
+    {
+      "file": "runs/lr_1e-05/best/generation_config.json",
+      "bytes": 142,
+      "sha256": "0ce03c5927126591622227d5f708783e2bb14caa0e777835ca6160701599b457"
+    },
+    {
+      "file": "runs/lr_1e-05/best/special_tokens_map.json",
+      "bytes": 2459,
+      "sha256": "376715f787382b6e58a4dcfe18291cb638e2842746264ae7c72d7a665644ade4"
+    },
+    {
+      "file": "runs/lr_1e-05/best/spiece.model",
+      "bytes": 820370,
+      "sha256": "59986b62f9f0b90edafb9b073ea7b93d21114a5841219a1ea2399ade73f729c6"
+    },
+    {
+      "file": "runs/lr_1e-05/best/tokenizer.json",
+      "bytes": 4386663,
+      "sha256": "e23a9e4f27b78c111ca5c8f69fc0d1f588c17ba62df366983f416336ea8bb7fd"
+    },
+    {
+      "file": "runs/lr_1e-05/best/tokenizer_config.json",
+      "bytes": 19882,
+      "sha256": "e568741d43fe2765f3358e563c2a45c3849d58326fdc0c1c3a74e5e2d3be5d74"
+    },
+    {
+      "file": "runs/lr_1e-05/best_epoch.json",
+      "bytes": 206,
+      "sha256": "211876eba0606e91fbbc0479c7366066e3399da7208cc0a2c8cd6a4662625cb6"
+    },
+    {
+      "file": "runs/lr_1e-05/full_training_proof.json",
+      "bytes": 154,
+      "sha256": "1220728b37c577bf7bfffd41a9e0c5ac3ce2a771888774a8f176747e748176ad"
+    },
+    {
+      "file": "runs/lr_1e-05/run_result.json",
+      "bytes": 935,
+      "sha256": "19d0665932c74ddb48df792497e8c7ea6efbea7b2d05148f13b9d840283f3345"
+    },
+    {
+      "file": "runs/lr_3e-05/best/config.json",
+      "bytes": 726,
+      "sha256": "b3a6b3c5e70b4c11b8b020c5377d9e9a16c3ccba6fbc229f82c2d214da03c874"
+    },
+    {
+      "file": "runs/lr_3e-05/best/generation_config.json",
+      "bytes": 142,
+      "sha256": "0ce03c5927126591622227d5f708783e2bb14caa0e777835ca6160701599b457"
+    },
+    {
+      "file": "runs/lr_3e-05/best/special_tokens_map.json",
+      "bytes": 2459,
+      "sha256": "376715f787382b6e58a4dcfe18291cb638e2842746264ae7c72d7a665644ade4"
+    },
+    {
+      "file": "runs/lr_3e-05/best/spiece.model",
+      "bytes": 820370,
+      "sha256": "59986b62f9f0b90edafb9b073ea7b93d21114a5841219a1ea2399ade73f729c6"
+    },
+    {
+      "file": "runs/lr_3e-05/best/tokenizer.json",
+      "bytes": 4386663,
+      "sha256": "e23a9e4f27b78c111ca5c8f69fc0d1f588c17ba62df366983f416336ea8bb7fd"
+    },
+    {
+      "file": "runs/lr_3e-05/best/tokenizer_config.json",
+      "bytes": 19882,
+      "sha256": "e568741d43fe2765f3358e563c2a45c3849d58326fdc0c1c3a74e5e2d3be5d74"
+    },
+    {
+      "file": "runs/lr_3e-05/best_epoch.json",
+      "bytes": 209,
+      "sha256": "3c4d1b9709d3f7b59a642be8b1c07f69dbe4a923bec8016579d089a90b8bb851"
+    },
+    {
+      "file": "runs/lr_3e-05/full_training_proof.json",
+      "bytes": 154,
+      "sha256": "d61a882d66867973c2303b0f2ee4b3a67b8bcc01dcfda0cd7062116f09cab138"
+    },
+    {
+      "file": "runs/lr_3e-05/run_result.json",
+      "bytes": 935,
+      "sha256": "33df990ca4f25682fd3157f02c4d27e8b60428982c937c3c151de04dd4ad4da3"
+    },
+    {
+      "file": "runs/reload_verification.json",
+      "bytes": 79,
+      "sha256": "d4ed0e502ae1dc80da76474f052d2728898f67e79e74391d79559940ea504962"
+    },
+    {
+      "file": "runs/selected_model.json",
+      "bytes": 3454,
+      "sha256": "d74dfebb3aa6d9e7dbc2258a5dc6620049dd60e3d0ac9748f7e23eb307dd1841"
+    },
+    {
+      "file": "runs/test_metrics.json",
+      "bytes": 2510,
+      "sha256": "65c8ac099d1972f052d657c0784809de16c56a5e2a9aea44f4e96d16eda6c988"
+    },
+    {
+      "file": "runs/test_predictions.jsonl",
+      "bytes": 207256,
+      "sha256": "55e6480b4b7061cd441d0387e4b55cb91d5ec9115c08cfe57c818a284b25f1ac"
+    },
+    {
+      "file": "runs/token_audit.json",
+      "bytes": 71,
+      "sha256": "fe083990ed606ce549bc33315a0c1f1ed6e1b23f87c96929cf1132ff94c3dbb1"
+    },
+    {
+      "file": "verification/remote_source/score_judgments.py",
+      "bytes": 2937,
+      "sha256": "be53d06d15af5aa5de799215a066a1ad1e70127f66b85e3e8ffa48b83e25aa7d"
+    },
+    {
+      "file": "verification/remote_source/test_finetune.py",
+      "bytes": 3903,
+      "sha256": "37feee7466a24791d4997a9169a19fd00de4bf3049eebd3ec8bce049140b3a8a"
+    }
+  ]
+}

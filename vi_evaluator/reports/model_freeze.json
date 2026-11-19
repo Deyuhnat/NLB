@@ -1,0 +1,15 @@
+{
+  "files": {
+    "encoder/config.json": "44d82c235a7e37af15c18048f57212089bbc492713683874094dea8f89e92fa9",
+    "encoder/model.safetensors": "1210ff44e553f923f07ef93359dfd542636c6a0217729877287b36289a481473",
+    "encoder/special_tokens_map.json": "8c785abebea9ae3257b61681b4e6fd8365ceafde980c21970d001e834cf10835",
+    "encoder/tokenizer.json": "3a56def25aa40facc030ea8b0b87f3688e4b3c39eb8b45d5702b3a1300fe2a20",
+    "encoder/tokenizer_config.json": "3a8d9bef4da7fc3ac71da789f225b47dc7599a28cfdcc2140463771927dc0726",
+    "gate.json": "c812bbbb720118f5b3d6020b0aa2b018e6499c3057b670f8d7e5d9edfe63baa9",
+    "heads.pt": "f7ad2c279cdcf1ac79fbb52510a65cb88dab6e549bf6468b93b74af5e9abe1c7",
+    "model_card.json": "7b45b3a236b099d7e60754603c15ae8a79a16687cfb2b84c83aa0d3ed529841c"
+  },
+  "checkpoint": "/kaggle/working/vi_evaluator/artifacts/stage_b/best",
+  "test_access": "after this freeze",
+  "human_validated": false
+}

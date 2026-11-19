@@ -1,0 +1,42 @@
+{
+  "seed": 42,
+  "visp_dataset": "ngwgsang/ViSP",
+  "visp_revision": "79b8edafb9e422330a3cfc663eb8bc2756e3ecf9",
+  "visp_expected": {
+    "train": 406308,
+    "validation": 391044,
+    "test": 380590
+  },
+  "encoder": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+  "encoder_revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42",
+  "max_tokens": 512,
+  "stage_a": {
+    "epochs": 1,
+    "lr": 2e-05,
+    "weight_decay": 0.01,
+    "warmup_ratio": 0.1,
+    "optimizer_batch": 64,
+    "micro_batches": [
+      32,
+      16,
+      8
+    ],
+    "validation_groups": 5000,
+    "retrieval_pool": 1024,
+    "temperature": 0.05
+  },
+  "stage_b": {
+    "epochs": 5,
+    "patience": 2,
+    "encoder_lr": 1e-05,
+    "head_lr": 0.0001,
+    "batch": 16,
+    "accumulation": 2,
+    "rank_weight": 0.5,
+    "fluency_weight": 0.25,
+    "semantic_weight": 0.25
+  },
+  "label_origin": "automatic_proxy_and_legacy_inferred_preference",
+  "human_validated": false,
+  "context_used": false
+}

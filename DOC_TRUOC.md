@@ -1,0 +1,73 @@
+# Bàn giao ViSP + Vietnamese Evaluator
+
+**Bộ dữ liệu gồm 1.050 câu đã được nhóm review**
+
+## Hai model đã train
+
+| Thành phần | Việc thực hiện | Kết quả và giới hạn |
+|---|---|---|
+| ViSP generator | Full fine-tune model ViSP có sẵn bằng 697 cặp train nhóm; 141 dev chọn checkpoint, 150 test hồi cứu. Checkpoint LR=1e-5, epoch 1. | chrF++ 89,79; ViSP gốc 76,59; giữ nguyên câu 92,56. Chưa vượt baseline giữ nguyên. |
+| Vietnamese evaluator | Full encoder foundation trên 365.311 cặp ViSP train hợp lệ sau loại rò rỉ/trùng; adaptation bằng 697 nguồn nhóm; chọn bằng 141 dev. Có đối chứng bỏ foundation. | Đã train, reload và chạy API. Semantic MAE 0,1847, kém baseline hằng 0,0444; Spearman -0,4735. Chưa khuyến nghị làm metric chính. |
+
+Không dùng toàn bộ 1.177.942 dòng ViSP để train evaluator: số đó gồm cả validation/test. Các split giữ riêng để đánh giá. 1.050 câu nhóm cũng không dùng hết làm train; có dev/test và các mẫu loại trừ, xem manifest của từng thí nghiệm.
+
+## Luồng sử dụng
+
+Câu tiếng Việt → ViSP sinh phương án → evaluator chấm cặp câu gốc/phương án → application hiển thị để đọc và kiểm tra.
+
+Hai checkpoint khác nhau, không ghi đè hoặc thay thế nhau. Gate được chọn trên dev của evaluator hiện giữ câu gốc trên toàn bộ dev và 240 câu test mới. Không bật tự động áp dụng sửa câu chỉ dựa vào điểm proxy hiện tại. Gói có teacher.py để chấm tham chiếu tự động; teacher cần tải model Hugging Face ở lần đầu và cũng chưa được người đọc hiệu chuẩn. Không có kết quả benchmark độc lập đã xác nhận bởi người đọc.
+
+JFLEG/SEEDA là cơ sở thiết kế đánh giá; đây không phải hai model chính thức được retrain. Bộ này không xác nhận độ trung thành với nguyên tác tiếng Trung, không dùng ngữ cảnh và không gồm hướng emotion.
+
+## Trong ZIP có gì?
+
+- visp_finetune/: full weights/tokenizer tại runs/lr_1e-05/best/, infer.py, source training, notebook đã chạy, dữ liệu chia sẵn, báo cáo và bằng chứng kiểm tra.
+- vi_evaluator/: checkpoint/, inference.py, api.py, teacher.py, báo cáo, source/notebook training và bằng chứng reload/API.
+- prepare_evaluator_input.py: ghép input gốc và output ViSP theo sample_id để chấm, giữ trạng thái sinh câu.
+- FILE_MANIFEST.json: SHA-256 từng file. SHA-256 ZIP nằm ở RELEASE.json bên ngoài ZIP.
+
+Full weights đã đủ cho inference hoặc bắt đầu một lượt fine-tune mới. Optimizer/RNG checkpoint latest.pt của generator không nằm trong gói; cần output Kaggle nếu muốn resume chính xác lượt cũ. Notebook/source evaluator có cấu hình và dữ liệu nhóm, script tải corpus công khai ở revision đã khóa; không kèm lại toàn bộ corpus công khai hoặc model teacher. Môi trường .venv không được đóng gói.
+
+## Chạy trên máy nhận
+
+Mở PowerShell tại thư mục giải nén, cài Python 3.11. Lệnh tạo môi trường CPU:
+
+```powershell
+py -3.11 -m venv .venv
+& .venv\Scripts\python.exe -m pip install torch==2.6.0 --index-url https://download.pytorch.org/whl/cpu
+& .venv\Scripts\python.exe -m pip install -r visp_finetune\requirements.txt -r vi_evaluator\requirements.txt
+```
+
+Sinh câu, ghép input rồi chấm (chọn tên output mới khi chạy lại):
+
+```powershell
+& .venv\Scripts\python.exe -X utf8 visp_finetune\infer.py --model visp_finetune\runs\lr_1e-05\best --input visp_finetune\data\inference_example.jsonl --output predictions.jsonl --device cpu
+& .venv\Scripts\python.exe -X utf8 prepare_evaluator_input.py --input visp_finetune\data\inference_example.jsonl --predictions predictions.jsonl --output pairs.jsonl
+& .venv\Scripts\python.exe -X utf8 vi_evaluator\inference.py --checkpoint vi_evaluator\checkpoint --input pairs.jsonl --output scored.jsonl --device cpu
+```
+
+scored.jsonl giữ source, candidate, trạng thái sinh và điểm evaluation. rank_score là điểm xếp hạng thô; fluency_delta_proxy và semantic_preservation_proxy là ước lượng tự động, không phải điểm người chấm 0–100. grammar_score=null, human_validated=false, context_used=false. Câu vượt giới hạn token của evaluator phải được chia nhỏ, không bị cắt âm thầm.
+
+API evaluator tùy chọn:
+
+```powershell
+& .venv\Scripts\python.exe -m pip install fastapi uvicorn
+$env:VI_EVALUATOR_CHECKPOINT = (Resolve-Path vi_evaluator\checkpoint).Path
+& .venv\Scripts\python.exe -m uvicorn api:app --app-dir vi_evaluator --host 127.0.0.1 --port 8000
+```
+
+POST /score nhận JSON có source và candidate. Đã kiểm tra model thật qua HTTP: input hợp lệ 200, rỗng/quá dài 422. Đây là API chấm câu; ViSP chạy qua infer.py, không tuyên bố đã có API generator chung.
+
+## Đọc báo cáo
+
+- visp_finetune/reports/KET_QUA_FULL_FINETUNE.html
+- visp_finetune/evaluation_model/KET_QUA_DANH_GIA.html (đánh giá tự động, tách khỏi phiếu người đọc)
+- vi_evaluator/reports/BAO_CAO_BAN_GIAO.html
+- vi_evaluator/reports/MODEL_READINESS.json
+
+## Notebook đã chạy (Private)
+
+- ViSP: https://www.kaggle.com/code/nettopro/visp-full-fine-tune-nlp501?scriptVersionId=370624086
+- Evaluator: https://www.kaggle.com/code/nettopro/vietnamese-evaluator-visp-team-full-training?scriptVersionId=371052411
+
+ZIP đủ để chạy inference local, không cần quyền Kaggle hoặc database. Muốn mở notebook Private cần quyền tài khoản phù hợp.

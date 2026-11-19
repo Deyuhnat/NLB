@@ -1,0 +1,101 @@
+{
+  "results": {
+    "full_visp_team": {
+      "all_unique_pairs": {
+        "fluency": {
+          "n": 584,
+          "sources": 240,
+          "mae": 0.19045560156339653,
+          "source_macro_mae": 0.1800969670022217,
+          "pearson": 0.239358409992562,
+          "spearman": 0.20153567096050481,
+          "constant_baseline_value": 0.0,
+          "constant_baseline_mae": 0.17045117445188027
+        },
+        "semantic": {
+          "n": 584,
+          "sources": 240,
+          "mae": 0.18471751737890188,
+          "source_macro_mae": 0.18211673303081616,
+          "pearson": -0.3447033495996638,
+          "spearman": -0.47345162081031467,
+          "constant_baseline_value": 1.0,
+          "constant_baseline_mae": 0.04438667962887837
+        }
+      },
+      "edited_candidates_only": {
+        "fluency": {
+          "n": 344,
+          "sources": 232,
+          "mae": 0.27868697157692773,
+          "source_macro_mae": 0.26672646252106574,
+          "pearson": 0.17873030248874017,
+          "spearman": 0.17623508741933863,
+          "constant_baseline_value": 0.0,
+          "constant_baseline_mae": 0.2893705984880758
+        },
+        "semantic": {
+          "n": 344,
+          "sources": 232,
+          "mae": 0.1353275155095572,
+          "source_macro_mae": 0.13016674204070616,
+          "pearson": -0.24748156931797485,
+          "spearman": -0.33830326005889855,
+          "constant_baseline_value": 1.0,
+          "constant_baseline_mae": 0.0753540956873883
+        }
+      }
+    },
+    "team_only_ablation": {
+      "all_unique_pairs": {
+        "fluency": {
+          "n": 584,
+          "sources": 240,
+          "mae": 0.1870894399726738,
+          "source_macro_mae": 0.17654076686853334,
+          "pearson": 0.20620986212646006,
+          "spearman": 0.18160005943842342,
+          "constant_baseline_value": 0.0,
+          "constant_baseline_mae": 0.17045117445188027
+        },
+        "semantic": {
+          "n": 584,
+          "sources": 240,
+          "mae": 0.17261128416262148,
+          "source_macro_mae": 0.17249096144930634,
+          "pearson": -0.35932516284891336,
+          "spearman": -0.4925965670763112,
+          "constant_baseline_value": 1.0,
+          "constant_baseline_mae": 0.04438667962887837
+        }
+      },
+      "edited_candidates_only": {
+        "fluency": {
+          "n": 344,
+          "sources": 232,
+          "mae": 0.2782613086557492,
+          "source_macro_mae": 0.2663840394943482,
+          "pearson": 0.13667287293669692,
+          "spearman": 0.12724370406836716,
+          "constant_baseline_value": 0.0,
+          "constant_baseline_mae": 0.2893705984880758
+        },
+        "semantic": {
+          "n": 344,
+          "sources": 232,
+          "mae": 0.126489753322917,
+          "source_macro_mae": 0.12433888376617262,
+          "pearson": -0.2600792042658183,
+          "spearman": -0.3490438555893251,
+          "constant_baseline_value": 1.0,
+          "constant_baseline_mae": 0.0753540956873883
+        }
+      }
+    }
+  },
+  "unique_pairs": 584,
+  "duplicate_policy": "one record per source sample and normalized candidate, regardless of how many systems emitted it",
+  "label_origin": "shared_automatic_teacher",
+  "human_validated": false,
+  "interpretation": "Exploratory agreement with the same teacher family used for supervision; not independent human validation. Models and thresholds are frozen; this script performs evaluation only."
+}

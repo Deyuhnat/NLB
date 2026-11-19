@@ -1,0 +1,32 @@
+{
+  "sentence": {
+    "visp_full": {
+      "total": 150,
+      "missing_or_pending": 150,
+      "safe_improvement": null,
+      "harm": null,
+      "clean_harm": null
+    },
+    "visp_base": {
+      "total": 150,
+      "missing_or_pending": 150,
+      "safe_improvement": null,
+      "harm": null,
+      "clean_harm": null
+    }
+  },
+  "edits": {
+    "visp_base": {
+      "performed": 420,
+      "pending": 420,
+      "confirmed_precision": null,
+      "edit_precision": null
+    },
+    "visp_full": {
+      "performed": 95,
+      "pending": 95,
+      "confirmed_precision": null,
+      "edit_precision": null
+    }
+  }
+}

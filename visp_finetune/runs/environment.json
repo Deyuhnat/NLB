@@ -1,0 +1,27 @@
+{
+  "platform": "Linux-6.18.55+-x86_64-with-glibc2.39",
+  "gpu": "Tesla T4",
+  "vram_bytes": 15636037632,
+  "torch": "2.11.0+cu130",
+  "transformers": "4.57.3",
+  "config": {
+    "seed": 42,
+    "learning_rates": [
+      1e-05,
+      3e-05
+    ],
+    "epochs": 6,
+    "patience": 2,
+    "batch_size": 2,
+    "accumulation": 8,
+    "epoch_draws": 952,
+    "max_tokens": 512,
+    "weight_decay": 0.01,
+    "warmup_ratio": 0.1,
+    "num_beams": 5,
+    "max_new_tokens": 512,
+    "precision": "float32",
+    "method": "full_finetune"
+  },
+  "revision": "ff75dba118e7a175142d5daa9b893b44229c1f55"
+}

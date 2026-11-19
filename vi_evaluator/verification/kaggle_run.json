@@ -1,0 +1,22 @@
+{
+  "kernel_id": 145742493,
+  "script_version_id": 371052411,
+  "version": 5,
+  "mode": "BATCH_AUTO_ARCHIVE",
+  "status": "COMPLETE",
+  "is_private": true,
+  "accelerator": "GPU T4 x2",
+  "training_complete": true,
+  "reason": "Reproduce the verified frozen experiment after the interactive session ended without persisted files",
+  "checked_utc": "2026-11-18T14:54:36.331790+00:00",
+  "notebook_sha256": "2a5e75bea388326e002f60d9156e13c00b503a3e99d9a274add89232bf0c9a3a",
+  "outputs_archived": true,
+  "output_file_count": 145,
+  "url": "https://www.kaggle.com/code/nettopro/vietnamese-evaluator-visp-team-full-training?scriptVersionId=371052411",
+  "local_main_checkpoint_downloaded": true,
+  "local_ablation_checkpoint_downloaded": true,
+  "actual_model_reload_passed": true,
+  "http_api_smoke_passed": true,
+  "extended_test_complete": true,
+  "primary_metric_recommended": false
+}

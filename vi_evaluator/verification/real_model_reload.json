@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "torch_version": "2.6.0+cpu",
+  "transformers_version": "4.57.3",
+  "device": "cpu",
+  "encoder_sha256": "e7c4450c6e4cad62481d5bd357e2f98c07cecf0c74540cf0946edf3c759fbc72",
+  "encoder_parameters": 117505920,
+  "samples": 3,
+  "cpu_gpu_max_abs_difference": {
+    "rank_score": 2.980232238769531e-07,
+    "fluency_delta_proxy": 4.470348358154297e-08,
+    "semantic_preservation_proxy": 5.960464477539063e-08
+  },
+  "tolerance": 0.0001,
+  "load_seconds": 0.963754099999278,
+  "score_wall_seconds": 0.1538050999997722,
+  "human_validated": false,
+  "context_used": false
+}

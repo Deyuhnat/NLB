@@ -1,0 +1,63 @@
+{
+  "stage": "A",
+  "training_scope": "all eligible official ViSP train rows",
+  "raw_train_rows": 406308,
+  "trained_rows": 365311,
+  "optimizer_steps": 5702,
+  "all_encoder_parameters_trainable": true,
+  "gradient_tensors": 197,
+  "encoder_tensors": 197,
+  "before_sha256": "8355d3903a87b5a491625427d5456594c758472cd11ca755c676e3231fe11749",
+  "after_sha256": "3bfdd4b4a33260ca5a5e267bca046873997323d109bc97fcf217e44ea79d5aa7",
+  "validation_history": [
+    {
+      "seen": 91328,
+      "steps": 1422,
+      "n": 5000,
+      "pool_size": 1024,
+      "r_at_1": 0.9992,
+      "mrr": 0.9996
+    },
+    {
+      "seen": 182656,
+      "steps": 2849,
+      "n": 5000,
+      "pool_size": 1024,
+      "r_at_1": 0.9996,
+      "mrr": 0.9998
+    },
+    {
+      "seen": 273984,
+      "steps": 4276,
+      "n": 5000,
+      "pool_size": 1024,
+      "r_at_1": 0.9994,
+      "mrr": 0.9997
+    },
+    {
+      "seen": 365311,
+      "steps": 5702,
+      "n": 5000,
+      "pool_size": 1024,
+      "r_at_1": 0.9996,
+      "mrr": 0.9998
+    }
+  ],
+  "initial_validation": {
+    "n": 5000,
+    "pool_size": 1024,
+    "r_at_1": 0.9978,
+    "mrr": 0.9986053833007813
+  },
+  "device": "Tesla T4",
+  "seconds_this_session": 1337.202186025,
+  "preflight": {
+    "batch": 32,
+    "peak_bytes": 2441005568,
+    "total_bytes": 15636037632
+  },
+  "checkpoint_selection": "full epoch 1; quarter evaluations are diagnostics, exported weights have seen the complete eligible corpus",
+  "early_weight_update_verified": true,
+  "skipped_amp_updates": 6,
+  "scheduler_steps": 5702
+}

@@ -1,0 +1,13 @@
+{
+  "training_complete": true,
+  "inference_verified": true,
+  "http_api_verified": true,
+  "surrogate_role": "experimental_research_model",
+  "primary_metric_recommended": false,
+  "automatic_rewrite_gate_changes_dev": 0,
+  "semantic_mae": 0.18471751737890188,
+  "constant_semantic_mae": 0.04438667962887837,
+  "semantic_spearman": -0.47345162081031467,
+  "reference_teacher_included": true,
+  "human_validated": false
+}

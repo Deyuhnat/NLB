@@ -1,0 +1,16 @@
+{
+  "url": "https://www.kaggle.com/code/nettopro/visp-full-fine-tune-nlp501",
+  "privacy": "private confirmed in Share dialog",
+  "accelerator": "GPU T4 x2",
+  "state": "submitted_save_and_run_all",
+  "completed": true,
+  "version": 2,
+  "visibility": "private_verified_in_share_dialog",
+  "status": "complete",
+  "version_1": "warmup sentinel assertion corrected; superseded",
+  "version_url": "https://www.kaggle.com/code/nettopro/visp-full-fine-tune-nlp501?scriptVersionId=370624086",
+  "run_id": 370624086,
+  "visp_training_status": "full_finetune_complete_on_kaggle_v2",
+  "selected_lr": 1e-05,
+  "selected_epoch": 1
+}

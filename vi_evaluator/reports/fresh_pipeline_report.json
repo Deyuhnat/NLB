@@ -1,0 +1,37 @@
+{
+  "fresh_sources": 240,
+  "fresh_works": 12,
+  "systems": {
+    "base_top1": {
+      "n": 240,
+      "changed": 220,
+      "mean_fluency_delta_proxy": 0.12247549692789714,
+      "mean_semantic_proxy": 0.915185420861455
+    },
+    "finetuned_top1": {
+      "n": 240,
+      "changed": 103,
+      "mean_fluency_delta_proxy": -0.00362030565738678,
+      "mean_semantic_proxy": 0.976883281293533
+    },
+    "identity": {
+      "n": 240,
+      "changed": 0,
+      "mean_fluency_delta_proxy": 0.0,
+      "mean_semantic_proxy": 0.9999999968000072
+    },
+    "new_evaluator_rerank": {
+      "n": 240,
+      "changed": 0,
+      "mean_fluency_delta_proxy": 0.0,
+      "mean_semantic_proxy": 0.9999999968000072
+    }
+  },
+  "label_origin": "automatic_proxy",
+  "human_validated": false,
+  "context_used": false,
+  "chinese_translation_adequacy": "not measured; evaluation is relative to Vietnamese source",
+  "official_JFLEG": false,
+  "official_SEEDA": false,
+  "circularity": "Teacher targets also supervised evaluator heads. Agreement with the teacher is not independent evidence of human naturalness."
+}

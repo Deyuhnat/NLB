@@ -1,0 +1,15 @@
+{
+  "samples": 150,
+  "forms": 300,
+  "edits": 515,
+  "all_ids_unique": true,
+  "input_labels_consistent": true,
+  "all_edit_spans_match_original_text": true,
+  "metrics_recomputed": true,
+  "original_human_forms_still_pending": true,
+  "original_evaluation_file_hashes_unchanged": true,
+  "independent_human_review": false,
+  "assessment_source": "model_assisted_contextual_review",
+  "sentence_uncertain": 1,
+  "edit_uncertain": 1
+}

@@ -1,0 +1,7 @@
+{
+  "all_parameters_trainable": true,
+  "total_parameters": 225950976,
+  "gradient_tensors": 257,
+  "parameter_tensors": 257,
+  "changed_sentinels": 253
+}

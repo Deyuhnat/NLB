@@ -1,0 +1,14 @@
+{
+  "visp_base": {
+    "performed": 420,
+    "pending": 420,
+    "confirmed_precision": null,
+    "edit_precision": null
+  },
+  "visp_full": {
+    "performed": 95,
+    "pending": 95,
+    "confirmed_precision": null,
+    "edit_precision": null
+  }
+}

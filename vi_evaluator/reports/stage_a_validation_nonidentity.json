@@ -1,0 +1,13 @@
+{
+  "n_source_rows": 306831,
+  "n_evaluated": 306831,
+  "queries_without_nonidentity_positive": 0,
+  "r_at_1": 1.0,
+  "mrr": 1.0,
+  "pool_size": 1024,
+  "identity_candidates_masked": 2205905,
+  "mean_distinct_groups_per_pool": 19.223333333333333,
+  "mean_legal_positive_candidates": 53.62054681567378,
+  "interpretation": "Group retrieval after exact token-identity removal. Adjacent paraphrase families remain grouped in pools; this is not human naturalness or translation adequacy.",
+  "protocol_origin": "post-freeze diagnostic correction; no model tuning uses these scores"
+}

@@ -1,0 +1,64 @@
+{
+  "selected": {
+    "threshold": 1000000000.0,
+    "weak_choice_match": 0.48226950354609927,
+    "changes": 0,
+    "teacher_harm_count": 0,
+    "teacher_harm_rate": 0.0
+  },
+  "grid": [
+    {
+      "threshold": 0.0,
+      "weak_choice_match": 0.48226950354609927,
+      "changes": 0,
+      "teacher_harm_count": 0,
+      "teacher_harm_rate": 0.0
+    },
+    {
+      "threshold": 0.05,
+      "weak_choice_match": 0.48226950354609927,
+      "changes": 0,
+      "teacher_harm_count": 0,
+      "teacher_harm_rate": 0.0
+    },
+    {
+      "threshold": 0.1,
+      "weak_choice_match": 0.48226950354609927,
+      "changes": 0,
+      "teacher_harm_count": 0,
+      "teacher_harm_rate": 0.0
+    },
+    {
+      "threshold": 0.2,
+      "weak_choice_match": 0.48226950354609927,
+      "changes": 0,
+      "teacher_harm_count": 0,
+      "teacher_harm_rate": 0.0
+    },
+    {
+      "threshold": 0.5,
+      "weak_choice_match": 0.48226950354609927,
+      "changes": 0,
+      "teacher_harm_count": 0,
+      "teacher_harm_rate": 0.0
+    },
+    {
+      "threshold": 1.0,
+      "weak_choice_match": 0.48226950354609927,
+      "changes": 0,
+      "teacher_harm_count": 0,
+      "teacher_harm_rate": 0.0
+    },
+    {
+      "threshold": 1000000000.0,
+      "weak_choice_match": 0.48226950354609927,
+      "changes": 0,
+      "teacher_harm_count": 0,
+      "teacher_harm_rate": 0.0
+    }
+  ],
+  "selection_split": "dev_only",
+  "label_origin": "automatic_teacher_and_historical_choice",
+  "human_validated": false,
+  "policy": "rank margin over copy; teacher harm cap 5% on dev; ties favor fewer edits"
+}

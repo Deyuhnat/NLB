@@ -1,0 +1,50 @@
+{
+  "completed": true,
+  "source_count": 697,
+  "train_rows": 2670,
+  "history": [
+    {
+      "epoch": 1,
+      "weak_preference_accuracy": 0.6753036456258235,
+      "weighted_preference_denominator": 102.91667008399963,
+      "fluency_proxy_mae": 0.2179247870760144,
+      "semantic_proxy_mae": 0.1899841030813613,
+      "loss": 0.3693864214069703,
+      "label_origin": "automatic_proxy_and_legacy_inferred_preference",
+      "human_validated": false
+    },
+    {
+      "epoch": 2,
+      "weak_preference_accuracy": 0.6817813731849153,
+      "weighted_preference_denominator": 102.91667008399963,
+      "fluency_proxy_mae": 0.21513697797397396,
+      "semantic_proxy_mae": 0.17059407987684574,
+      "loss": 0.3218730035073617,
+      "label_origin": "automatic_proxy_and_legacy_inferred_preference",
+      "human_validated": false
+    },
+    {
+      "epoch": 3,
+      "weak_preference_accuracy": 0.6663967590833497,
+      "weighted_preference_denominator": 102.91667008399963,
+      "fluency_proxy_mae": 0.20907217747760268,
+      "semantic_proxy_mae": 0.15398087569002836,
+      "loss": 0.29937592740444574,
+      "label_origin": "automatic_proxy_and_legacy_inferred_preference",
+      "human_validated": false
+    },
+    {
+      "epoch": 4,
+      "weak_preference_accuracy": 0.6769230749094015,
+      "weighted_preference_denominator": 102.91667008399963,
+      "fluency_proxy_mae": 0.20761080609177643,
+      "semantic_proxy_mae": 0.14853950592706788,
+      "loss": 0.2974710049217238,
+      "label_origin": "automatic_proxy_and_legacy_inferred_preference",
+      "human_validated": false
+    }
+  ],
+  "optimizer_steps": 332,
+  "label_origin": "automatic_proxy_and_legacy_inferred_preference",
+  "human_validated": false
+}

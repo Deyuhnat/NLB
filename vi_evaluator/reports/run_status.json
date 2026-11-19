@@ -1,0 +1,14 @@
+{
+  "training_complete": true,
+  "artifact_kind": "Vietnamese evaluator, separate from ViSP generator",
+  "stage_a_rows": 365311,
+  "team_train_sources": 697,
+  "dev_sources": 141,
+  "historical_test_sources": 150,
+  "human_validated": false,
+  "context_used": false,
+  "official_JFLEG": false,
+  "official_SEEDA": false,
+  "fresh_pipeline_evaluation": "completed_automatic_only",
+  "created_utc": "2026-11-18T15:20:18.051505+00:00"
+}
