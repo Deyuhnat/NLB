@@ -102,7 +102,15 @@ Trạng thái generator: `status=ok`, `fallback=false`.
 
 Trạng thái generator: `status=ok`, `fallback=false`.
 
-**Evaluator:** chưa chấm riêng ví dụ này (`evaluation=null`); không có điểm giả.
+**Evaluator (actual published checkpoint):**
+
+| Metric | Original unchanged | Meaning-deleted output |
+|---|---|
+| rank_score | -0.292058 | -0.523073 |
+| fluency_delta_proxy | 0.062793 | 0.075771 |
+| semantic_preservation_proxy | 0.859860 | 0.872217 |
+
+Rank prefers the original, but the semantic head incorrectly scores the meaning-deleted output higher. This does not demonstrate reliable meaning-loss detection. The current gate keeps the original; this is not proof of understanding the omitted purpose.
 
 ## Nguồn và cách sử dụng
 
@@ -274,8 +282,35 @@ Mở mục dưới để xem/copy dữ liệu cho application. Không cần tả
         "latency_ms": 515.8993569999666
       },
       "inspection_note": "LỖI MẤT Ý: bỏ mục đích “muốn thu thập về tặng cho mẹ”. Không nên chấp nhận output này.",
-      "evaluation": null,
-      "evaluation_status": "not_scored_in_this_addendum"
+      "evaluation": {
+        "rank_score": -0.5230730175971985,
+        "fluency_delta_proxy": 0.07577066123485565,
+        "semantic_preservation_proxy": 0.872217059135437,
+        "grammar_score": null,
+        "evaluator_version": "7b45b3a236b099d7",
+        "context_used": false,
+        "human_validated": false,
+        "label_origin": "automatic_proxy_and_legacy_inferred_preference",
+        "score_contract": "raw rank; fluency=NLL(source)-NLL(candidate) proxy; semantic=frozen teacher cosine proxy; no 0-100 human calibration",
+        "latency_seconds_per_pair": 0.06898980000005395,
+        "latency_scope": "model_forward_excludes_tokenization"
+      },
+      "evaluation_status": "scored_from_published_handoff_checkpoint",
+      "identity_comparison": {
+        "rank_score": -0.2920582890510559,
+        "fluency_delta_proxy": 0.0627933144569397,
+        "semantic_preservation_proxy": 0.8598604798316956,
+        "grammar_score": null,
+        "evaluator_version": "7b45b3a236b099d7",
+        "context_used": false,
+        "human_validated": false,
+        "label_origin": "automatic_proxy_and_legacy_inferred_preference",
+        "score_contract": "raw rank; fluency=NLL(source)-NLL(candidate) proxy; semantic=frozen teacher cosine proxy; no 0-100 human calibration",
+        "latency_seconds_per_pair": 0.06898980000005395,
+        "latency_scope": "model_forward_excludes_tokenization"
+      },
+      "rank_margin_deleted_minus_identity": -0.23101472854614258,
+      "evaluation_origin": "Published handoff ZIP checkpoint"
     }
   ]
 }
