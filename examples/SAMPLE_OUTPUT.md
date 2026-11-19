@@ -1,12 +1,12 @@
 # Sample output chung — ViSP và evaluator
 
-Đây là **output đã chạy thật**, không chỉnh sửa câu model trả về. Có ví dụ giữ nguyên, sửa nhẹ và lỗi mất ý. Các ví dụ chỉ minh họa hành vi/định dạng, không phải benchmark chất lượng độc lập.
+Output ViSP và điểm evaluator được chạy thật. Mỗi ví dụ có **quyết định tiếng Việt của bộ chọn** và câu cuối cùng. Phần quyết định là diễn giải quy tắc rank/gate, không phải lời giải thích ngữ nghĩa do model sinh.
 
-**Cách đọc:** phần bị xóa được ~~gạch ngang~~ trong câu gốc; phần thêm/thay được **in đậm** trong output. Nếu hai câu giống nhau, model đã giữ nguyên.
+Ngưỡng gate hiện tại là `1e9`: chỉ chọn phương án nếu rank(phương án) − rank(câu gốc) vượt ngưỡng. Bộ chọn hiện rất bảo thủ; giữ câu gốc chưa chứng minh phát hiện được lỗi mất ý. **Các điểm chưa phù hợp làm metric chính.**
 
-Trên toàn bộ test hồi cứu, ViSP thay đổi **57/150 câu (38%)**, giữ nguyên 93 câu. “Có thay đổi” không đồng nghĩa “viết lại tốt hơn”. Điểm evaluator là proxy chưa hiệu chuẩn; model hiện chưa nên làm metric chính.
+Đánh dấu: ~~phần bị xóa~~ ở câu gốc; **phần thêm** ở output. Test hồi cứu có 57/150 output thay đổi (38%); các ví dụ này không phải phép đo chất lượng độc lập.
 
-[Hướng dẫn chạy và tích hợp](../README.md)
+[Hướng dẫn chạy](../README.md)
 
 ## Ví dụ 1
 
@@ -15,17 +15,25 @@ Trên toàn bộ test hồi cứu, ViSP thay đổi **57/150 câu (38%)**, giữ
 | Câu gốc | Tần Trường Sinh hiểu rất rõ, một khi mối <del>liên</del> hệ giữa hai người bị phát giác, không chỉ thân phận hóa thân bị bại lộ, mà ngay cả bí mật của bản thân hắn cũng sẽ không còn chỗ dung thân. |
 | Output ViSP | Tần Trường Sinh hiểu rất rõ, một khi mối <strong>quan</strong> hệ giữa hai người bị phát giác, không chỉ thân phận hóa thân bị bại lộ, mà ngay cả bí mật của bản thân hắn cũng sẽ không còn chỗ dung thân. |
 
-**Nhận xét khi đối chiếu:** Thay “mối liên hệ” bằng “mối quan hệ”; đây là sửa nhẹ, chưa phải viết lại cấu trúc câu.
+### Quyết định của bộ chọn
 
-Trạng thái generator: `status=ok`, `fallback=false`.
+**GIỮ CÂU GỐC**
 
-| Điểm evaluator thực tế | Giá trị |
+**Câu cuối cùng:**
+
+> Tần Trường Sinh hiểu rất rõ, một khi mối liên hệ giữa hai người bị phát giác, không chỉ thân phận hóa thân bị bại lộ, mà ngay cả bí mật của bản thân hắn cũng sẽ không còn chỗ dung thân.
+
+**Lý do theo điểm và gate:** Điểm xếp hạng phương án thấp hơn hoặc bằng câu gốc; đồng thời không vượt ngưỡng gate.
+
+| Điểm thực tế | Câu gốc | Phương án ViSP |
 |---|---|
-| rank_score | 0.037410 |
-| fluency_delta_proxy | 0.066931 |
-| semantic_preservation_proxy | 0.805124 |
-| grammar_score | null |
-| human_validated / context_used | false / false |
+| rank_score | 0.041008 | 0.037410 |
+| fluency_delta_proxy | 0.066646 | 0.066931 |
+| semantic_preservation_proxy | 0.804051 | 0.805124 |
+
+Chênh lệch rank: `-0.003598`; ngưỡng gate: `1e+09`.
+
+Trạng thái generator: `status=ok`, `fallback=false`. `status=ok` chỉ nghĩa sinh thành công về kỹ thuật.
 
 ## Ví dụ 2
 
@@ -34,17 +42,25 @@ Trạng thái generator: `status=ok`, `fallback=false`.
 | Câu gốc | Đệ tử tạp dịch qua lại đông đúc, chỉ có cắt đứt hoàn toàn liên hệ giữa bản thể và hóa thân mới có thể tránh né rủi ro ở mức tối đa. |
 | Output ViSP | Đệ tử tạp dịch qua lại đông đúc, chỉ có cắt đứt hoàn toàn liên hệ giữa bản thể và hóa thân mới có thể tránh né rủi ro ở mức tối đa. |
 
-**Nhận xét khi đối chiếu:** Giữ nguyên câu gốc, không có thay đổi.
+### Quyết định của bộ chọn
 
-Trạng thái generator: `status=ok`, `fallback=false`.
+**GIỮ CÂU GỐC**
 
-| Điểm evaluator thực tế | Giá trị |
+**Câu cuối cùng:**
+
+> Đệ tử tạp dịch qua lại đông đúc, chỉ có cắt đứt hoàn toàn liên hệ giữa bản thể và hóa thân mới có thể tránh né rủi ro ở mức tối đa.
+
+**Lý do theo điểm và gate:** Phương án ViSP trùng câu gốc, không có chỉnh sửa để áp dụng.
+
+| Điểm thực tế | Câu gốc | Phương án ViSP |
 |---|---|
-| rank_score | -0.331434 |
-| fluency_delta_proxy | 0.065685 |
-| semantic_preservation_proxy | 0.854465 |
-| grammar_score | null |
-| human_validated / context_used | false / false |
+| rank_score | -0.331434 | -0.331434 |
+| fluency_delta_proxy | 0.065685 | 0.065685 |
+| semantic_preservation_proxy | 0.854465 | 0.854465 |
+
+Chênh lệch rank: `0.000000`; ngưỡng gate: `1e+09`.
+
+Trạng thái generator: `status=ok`, `fallback=false`. `status=ok` chỉ nghĩa sinh thành công về kỹ thuật.
 
 ## Ví dụ 3
 
@@ -53,17 +69,25 @@ Trạng thái generator: `status=ok`, `fallback=false`.
 | Câu gốc | Tần Trường Sinh tâm thần khẽ động, lấy ra một bộ y phục tạp dịch đã chuẩn bị sẵn đưa đến trước mặt hóa thân: &quot;Đây là y phục của ngươi, phòng của ngươi ở cách đây mười dặm về phía tây!&quot; |
 | Output ViSP | Tần Trường Sinh tâm thần khẽ động, lấy ra một bộ y phục tạp dịch đã chuẩn bị sẵn đưa đến trước mặt hóa thân: &quot;Đây là y phục của ngươi, phòng của ngươi ở cách đây mười dặm về phía tây!&quot; |
 
-**Nhận xét khi đối chiếu:** Giữ nguyên câu gốc, không có thay đổi.
+### Quyết định của bộ chọn
 
-Trạng thái generator: `status=ok`, `fallback=false`.
+**GIỮ CÂU GỐC**
 
-| Điểm evaluator thực tế | Giá trị |
+**Câu cuối cùng:**
+
+> Tần Trường Sinh tâm thần khẽ động, lấy ra một bộ y phục tạp dịch đã chuẩn bị sẵn đưa đến trước mặt hóa thân: "Đây là y phục của ngươi, phòng của ngươi ở cách đây mười dặm về phía tây!"
+
+**Lý do theo điểm và gate:** Phương án ViSP trùng câu gốc, không có chỉnh sửa để áp dụng.
+
+| Điểm thực tế | Câu gốc | Phương án ViSP |
 |---|---|
-| rank_score | 0.178512 |
-| fluency_delta_proxy | 0.061545 |
-| semantic_preservation_proxy | 0.585644 |
-| grammar_score | null |
-| human_validated / context_used | false / false |
+| rank_score | 0.178512 | 0.178512 |
+| fluency_delta_proxy | 0.061545 | 0.061545 |
+| semantic_preservation_proxy | 0.585644 | 0.585644 |
+
+Chênh lệch rank: `0.000000`; ngưỡng gate: `1e+09`.
+
+Trạng thái generator: `status=ok`, `fallback=false`. `status=ok` chỉ nghĩa sinh thành công về kỹ thuật.
 
 ## Ví dụ 4
 
@@ -72,11 +96,27 @@ Trạng thái generator: `status=ok`, `fallback=false`.
 | Câu gốc | <del>Chỉ là</del> Tần Trường Sinh vốn không có ý định bán linh mễ. |
 | Output ViSP | Tần Trường Sinh vốn không có ý định bán linh mễ. |
 
+### Quyết định của bộ chọn
+
+**GIỮ CÂU GỐC**
+
+**Câu cuối cùng:**
+
+> Chỉ là Tần Trường Sinh vốn không có ý định bán linh mễ.
+
+**Lý do theo điểm và gate:** Điểm xếp hạng phương án thấp hơn hoặc bằng câu gốc; đồng thời không vượt ngưỡng gate.
+
+| Điểm thực tế | Câu gốc | Phương án ViSP |
+|---|---|
+| rank_score | -0.364870 | -0.464668 |
+| fluency_delta_proxy | 0.066543 | 0.072019 |
+| semantic_preservation_proxy | 0.797392 | 0.806176 |
+
+Chênh lệch rank: `-0.099798`; ngưỡng gate: `1e+09`.
+
 **Nhận xét khi đối chiếu:** Bỏ cụm “Chỉ là”. Có thay đổi, nhưng cần ngữ cảnh để quyết định có nên bỏ từ nối hay không.
 
-Trạng thái generator: `status=ok`, `fallback=false`.
-
-**Evaluator:** chưa chấm riêng ví dụ này (`evaluation=null`); không có điểm giả.
+Trạng thái generator: `status=ok`, `fallback=false`. `status=ok` chỉ nghĩa sinh thành công về kỹ thuật.
 
 ## Ví dụ 5
 
@@ -85,11 +125,27 @@ Trạng thái generator: `status=ok`, `fallback=false`.
 | Câu gốc | <del>Hơn nữa</del> Tần Trường Sinh cũng đã để Vương Ngũ đến phường thị vài lần. |
 | Output ViSP | Tần Trường Sinh cũng đã để Vương Ngũ đến phường thị vài lần. |
 
+### Quyết định của bộ chọn
+
+**GIỮ CÂU GỐC**
+
+**Câu cuối cùng:**
+
+> Hơn nữa Tần Trường Sinh cũng đã để Vương Ngũ đến phường thị vài lần.
+
+**Lý do theo điểm và gate:** Điểm xếp hạng phương án thấp hơn hoặc bằng câu gốc; đồng thời không vượt ngưỡng gate.
+
+| Điểm thực tế | Câu gốc | Phương án ViSP |
+|---|---|
+| rank_score | -0.372729 | -0.428376 |
+| fluency_delta_proxy | 0.063842 | 0.066372 |
+| semantic_preservation_proxy | 0.762824 | 0.776063 |
+
+Chênh lệch rank: `-0.055647`; ngưỡng gate: `1e+09`.
+
 **Nhận xét khi đối chiếu:** Bỏ cụm “Hơn nữa”. Đây là rút gọn từ nối, chưa chứng minh câu tốt hơn.
 
-Trạng thái generator: `status=ok`, `fallback=false`.
-
-**Evaluator:** chưa chấm riêng ví dụ này (`evaluation=null`); không có điểm giả.
+Trạng thái generator: `status=ok`, `fallback=false`. `status=ok` chỉ nghĩa sinh thành công về kỹ thuật.
 
 ## Ví dụ 6
 
@@ -98,46 +154,42 @@ Trạng thái generator: `status=ok`, `fallback=false`.
 | Câu gốc | Cô bé thấy huyết liên hoa rất đẹp, lại chưa từng thấy bao giờ, <del>muốn thu thập về tặng cho mẹ,</del> nên mới lên tiếng. |
 | Output ViSP | Cô bé thấy huyết liên hoa rất đẹp, lại chưa từng thấy bao giờ, nên mới lên tiếng. |
 
-**Nhận xét khi đối chiếu:** LỖI MẤT Ý: bỏ mục đích “muốn thu thập về tặng cho mẹ”. Không nên chấp nhận output này.
+### Quyết định của bộ chọn
 
-Trạng thái generator: `status=ok`, `fallback=false`.
+**GIỮ CÂU GỐC**
 
-**Evaluator (actual published checkpoint):**
+**Câu cuối cùng:**
 
-| Metric | Original unchanged | Meaning-deleted output |
+> Cô bé thấy huyết liên hoa rất đẹp, lại chưa từng thấy bao giờ, muốn thu thập về tặng cho mẹ, nên mới lên tiếng.
+
+**Lý do theo điểm và gate:** Điểm xếp hạng phương án thấp hơn hoặc bằng câu gốc; đồng thời không vượt ngưỡng gate.
+
+| Điểm thực tế | Câu gốc | Phương án ViSP |
 |---|---|
 | rank_score | -0.292058 | -0.523073 |
 | fluency_delta_proxy | 0.062793 | 0.075771 |
 | semantic_preservation_proxy | 0.859860 | 0.872217 |
 
-Rank prefers the original, but the semantic head incorrectly scores the meaning-deleted output higher. This does not demonstrate reliable meaning-loss detection. The current gate keeps the original; this is not proof of understanding the omitted purpose.
+Chênh lệch rank: `-0.231015`; ngưỡng gate: `1e+09`.
 
-## Nguồn và cách sử dụng
+**Nhận xét khi đọc câu:** output mất mục đích “muốn thu thập về tặng cho mẹ”. Rank ưu tiên câu gốc nhưng head semantic lại chấm output mất ý cao hơn. Vì vậy quyết định giữ câu gốc ở đây không chứng minh model hiểu lỗi mất ý.
 
-- Ví dụ 1–3: output CPU đã lưu tại `visp_finetune/reports/local_reload_predictions.jsonl`; evaluator đã chạy thật trên các cặp này.
-- Ví dụ 4–6: lấy từ output test hồi cứu tại `visp_finetune/runs/test_predictions.jsonl`; cố ý chọn câu có thay đổi, gồm một lỗi mất ý.
-- Generator được train bằng 697 cặp: 476 target giữ nguyên, 221 target thay đổi. Điều này phù hợp với xu hướng ít can thiệp, chưa chứng minh nguyên nhân duy nhất.
-- Đây là output generator trước gate; khác với việc gate evaluator chọn giữ câu gốc.
-- Giữ `sample_id`, `status`, `fallback`, `error` khi tích hợp. Không coi `status=ok` là bằng chứng chất lượng tốt.
-- Rank dùng so phương án cùng source. Điểm không phải xác suất hoặc điểm người đọc 0–100. Timing/sai số số thực có thể khác theo máy.
+Trạng thái generator: `status=ok`, `fallback=false`. `status=ok` chỉ nghĩa sinh thành công về kỹ thuật.
 
 ## JSON đầy đủ trong cùng file
 
-Mở mục dưới để xem/copy dữ liệu cho application. Không cần tải file sample riêng.
+Application có thể đọc `decision.action`, `decision.decision_vi`, `decision.reason_vi`, `decision.selected_text`. Các trường này minh họa lớp quyết định áp dụng sau scoring; API `/score` hiện tại vẫn chỉ trả điểm, chưa tự trả các trường quyết định mới này.
 
 <details>
-<summary>Xem JSON của cả 6 sample và thông tin nguồn</summary>
+<summary>Xem JSON của 6 sample, điểm và quyết định</summary>
 
 ```json
 {
   "scored_examples_metadata": {
-    "description": "Real stored ViSP CPU generation outputs plus actual evaluator CPU scoring; interface examples, not an independent quality benchmark.",
-    "generator_output_origin": "visp_finetune/reports/local_reload_predictions.jsonl",
-    "source_origin": "visp_finetune/data/inference_example.jsonl",
-    "evaluator_scored_at": "2026-11-19T09:47:07.548590+07:00",
+    "checkpoint_origin": "Published handoff ZIP checkpoint",
+    "evaluator_version": "7b45b3a236b099d7",
     "device": "cpu",
-    "generator_sha256": "db9ff2cef0885c53e5e042c437ed4d7adf7b8bce0e0d0a89fd29ac5ac99dbebd",
-    "evaluator_encoder_sha256": "1210ff44e553f923f07ef93359dfd542636c6a0217729877287b36289a481473",
+    "all_six_examples_rescored_with_identity": true,
     "human_validated": false
   },
   "changed_examples_metadata": {
@@ -161,8 +213,8 @@ Mở mục dưới để xem/copy dữ liệu cho application. Không cần tả
         "latency_ms": 3537.3416999999563
       },
       "evaluation": {
-        "rank_score": 0.03741016238927841,
-        "fluency_delta_proxy": 0.06693083047866821,
+        "rank_score": 0.03741014376282692,
+        "fluency_delta_proxy": 0.06693081557750702,
         "semantic_preservation_proxy": 0.8051238059997559,
         "grammar_score": null,
         "evaluator_version": "7b45b3a236b099d7",
@@ -170,9 +222,34 @@ Mở mục dưới để xem/copy dữ liệu cho application. Không cần tả
         "human_validated": false,
         "label_origin": "automatic_proxy_and_legacy_inferred_preference",
         "score_contract": "raw rank; fluency=NLL(source)-NLL(candidate) proxy; semantic=frozen teacher cosine proxy; no 0-100 human calibration",
-        "latency_seconds_per_pair": 0.13823243333354185,
+        "latency_seconds_per_pair": 0.04793571666656741,
         "latency_scope": "model_forward_excludes_tokenization"
-      }
+      },
+      "identity_comparison": {
+        "rank_score": 0.04100829362869263,
+        "fluency_delta_proxy": 0.06664589047431946,
+        "semantic_preservation_proxy": 0.8040511608123779,
+        "grammar_score": null,
+        "evaluator_version": "7b45b3a236b099d7",
+        "context_used": false,
+        "human_validated": false,
+        "label_origin": "automatic_proxy_and_legacy_inferred_preference",
+        "score_contract": "raw rank; fluency=NLL(source)-NLL(candidate) proxy; semantic=frozen teacher cosine proxy; no 0-100 human calibration",
+        "latency_seconds_per_pair": 0.04793571666656741,
+        "latency_scope": "model_forward_excludes_tokenization"
+      },
+      "decision": {
+        "action": "keep_original",
+        "decision_vi": "Giữ câu gốc",
+        "reason_vi": "Điểm xếp hạng phương án thấp hơn hoặc bằng câu gốc; đồng thời không vượt ngưỡng gate.",
+        "selected_text": "Tần Trường Sinh hiểu rất rõ, một khi mối liên hệ giữa hai người bị phát giác, không chỉ thân phận hóa thân bị bại lộ, mà ngay cả bí mật của bản thân hắn cũng sẽ không còn chỗ dung thân.",
+        "rank_margin": -0.0035981498658657074,
+        "gate_threshold": 1000000000.0,
+        "decision_origin": "deterministic_rank_margin_gate",
+        "not_a_model_generated_semantic_explanation": true
+      },
+      "evaluation_origin": "Published handoff ZIP checkpoint",
+      "evaluation_status": "scored_with_identity_comparison"
     },
     {
       "sample_id": "novel-03782e62ee9dd907a087eeac-p02s01",
@@ -189,7 +266,7 @@ Mở mục dưới để xem/copy dữ liệu cho application. Không cần tả
       },
       "evaluation": {
         "rank_score": -0.3314342796802521,
-        "fluency_delta_proxy": 0.06568525731563568,
+        "fluency_delta_proxy": 0.06568527221679688,
         "semantic_preservation_proxy": 0.8544645309448242,
         "grammar_score": null,
         "evaluator_version": "7b45b3a236b099d7",
@@ -197,9 +274,34 @@ Mở mục dưới để xem/copy dữ liệu cho application. Không cần tả
         "human_validated": false,
         "label_origin": "automatic_proxy_and_legacy_inferred_preference",
         "score_contract": "raw rank; fluency=NLL(source)-NLL(candidate) proxy; semantic=frozen teacher cosine proxy; no 0-100 human calibration",
-        "latency_seconds_per_pair": 0.13823243333354185,
+        "latency_seconds_per_pair": 0.04793571666656741,
         "latency_scope": "model_forward_excludes_tokenization"
-      }
+      },
+      "identity_comparison": {
+        "rank_score": -0.3314342796802521,
+        "fluency_delta_proxy": 0.06568527221679688,
+        "semantic_preservation_proxy": 0.8544645309448242,
+        "grammar_score": null,
+        "evaluator_version": "7b45b3a236b099d7",
+        "context_used": false,
+        "human_validated": false,
+        "label_origin": "automatic_proxy_and_legacy_inferred_preference",
+        "score_contract": "raw rank; fluency=NLL(source)-NLL(candidate) proxy; semantic=frozen teacher cosine proxy; no 0-100 human calibration",
+        "latency_seconds_per_pair": 0.04793571666656741,
+        "latency_scope": "model_forward_excludes_tokenization"
+      },
+      "decision": {
+        "action": "keep_original",
+        "decision_vi": "Giữ câu gốc",
+        "reason_vi": "Phương án ViSP trùng câu gốc, không có chỉnh sửa để áp dụng.",
+        "selected_text": "Đệ tử tạp dịch qua lại đông đúc, chỉ có cắt đứt hoàn toàn liên hệ giữa bản thể và hóa thân mới có thể tránh né rủi ro ở mức tối đa.",
+        "rank_margin": 0.0,
+        "gate_threshold": 1000000000.0,
+        "decision_origin": "deterministic_rank_margin_gate",
+        "not_a_model_generated_semantic_explanation": true
+      },
+      "evaluation_origin": "Published handoff ZIP checkpoint",
+      "evaluation_status": "scored_with_identity_comparison"
     },
     {
       "sample_id": "novel-03782e62ee9dd907a087eeac-p03s01",
@@ -216,7 +318,7 @@ Mở mục dưới để xem/copy dữ liệu cho application. Không cần tả
       },
       "evaluation": {
         "rank_score": 0.17851196229457855,
-        "fluency_delta_proxy": 0.061544548720121384,
+        "fluency_delta_proxy": 0.061544544994831085,
         "semantic_preservation_proxy": 0.5856443643569946,
         "grammar_score": null,
         "evaluator_version": "7b45b3a236b099d7",
@@ -224,9 +326,34 @@ Mở mục dưới để xem/copy dữ liệu cho application. Không cần tả
         "human_validated": false,
         "label_origin": "automatic_proxy_and_legacy_inferred_preference",
         "score_contract": "raw rank; fluency=NLL(source)-NLL(candidate) proxy; semantic=frozen teacher cosine proxy; no 0-100 human calibration",
-        "latency_seconds_per_pair": 0.13823243333354185,
+        "latency_seconds_per_pair": 0.04793571666656741,
         "latency_scope": "model_forward_excludes_tokenization"
-      }
+      },
+      "identity_comparison": {
+        "rank_score": 0.17851196229457855,
+        "fluency_delta_proxy": 0.061544544994831085,
+        "semantic_preservation_proxy": 0.5856443643569946,
+        "grammar_score": null,
+        "evaluator_version": "7b45b3a236b099d7",
+        "context_used": false,
+        "human_validated": false,
+        "label_origin": "automatic_proxy_and_legacy_inferred_preference",
+        "score_contract": "raw rank; fluency=NLL(source)-NLL(candidate) proxy; semantic=frozen teacher cosine proxy; no 0-100 human calibration",
+        "latency_seconds_per_pair": 0.04793571666656741,
+        "latency_scope": "model_forward_excludes_tokenization"
+      },
+      "decision": {
+        "action": "keep_original",
+        "decision_vi": "Giữ câu gốc",
+        "reason_vi": "Phương án ViSP trùng câu gốc, không có chỉnh sửa để áp dụng.",
+        "selected_text": "Tần Trường Sinh tâm thần khẽ động, lấy ra một bộ y phục tạp dịch đã chuẩn bị sẵn đưa đến trước mặt hóa thân: \"Đây là y phục của ngươi, phòng của ngươi ở cách đây mười dặm về phía tây!\"",
+        "rank_margin": 0.0,
+        "gate_threshold": 1000000000.0,
+        "decision_origin": "deterministic_rank_margin_gate",
+        "not_a_model_generated_semantic_explanation": true
+      },
+      "evaluation_origin": "Published handoff ZIP checkpoint",
+      "evaluation_status": "scored_with_identity_comparison"
     },
     {
       "sample_id": "novel-11951127ca879f416798c2df-p03s01",
@@ -244,8 +371,44 @@ Mở mục dưới để xem/copy dữ liệu cho application. Không cần tả
         "latency_ms": 548.0811950000088
       },
       "inspection_note": "Bỏ cụm “Chỉ là”. Có thay đổi, nhưng cần ngữ cảnh để quyết định có nên bỏ từ nối hay không.",
-      "evaluation": null,
-      "evaluation_status": "not_scored_in_this_addendum"
+      "evaluation": {
+        "rank_score": -0.46466830372810364,
+        "fluency_delta_proxy": 0.07201917469501495,
+        "semantic_preservation_proxy": 0.8061755895614624,
+        "grammar_score": null,
+        "evaluator_version": "7b45b3a236b099d7",
+        "context_used": false,
+        "human_validated": false,
+        "label_origin": "automatic_proxy_and_legacy_inferred_preference",
+        "score_contract": "raw rank; fluency=NLL(source)-NLL(candidate) proxy; semantic=frozen teacher cosine proxy; no 0-100 human calibration",
+        "latency_seconds_per_pair": 0.04793571666656741,
+        "latency_scope": "model_forward_excludes_tokenization"
+      },
+      "evaluation_status": "scored_with_identity_comparison",
+      "identity_comparison": {
+        "rank_score": -0.3648703694343567,
+        "fluency_delta_proxy": 0.06654292345046997,
+        "semantic_preservation_proxy": 0.7973923087120056,
+        "grammar_score": null,
+        "evaluator_version": "7b45b3a236b099d7",
+        "context_used": false,
+        "human_validated": false,
+        "label_origin": "automatic_proxy_and_legacy_inferred_preference",
+        "score_contract": "raw rank; fluency=NLL(source)-NLL(candidate) proxy; semantic=frozen teacher cosine proxy; no 0-100 human calibration",
+        "latency_seconds_per_pair": 0.04793571666656741,
+        "latency_scope": "model_forward_excludes_tokenization"
+      },
+      "decision": {
+        "action": "keep_original",
+        "decision_vi": "Giữ câu gốc",
+        "reason_vi": "Điểm xếp hạng phương án thấp hơn hoặc bằng câu gốc; đồng thời không vượt ngưỡng gate.",
+        "selected_text": "Chỉ là Tần Trường Sinh vốn không có ý định bán linh mễ.",
+        "rank_margin": -0.09979793429374695,
+        "gate_threshold": 1000000000.0,
+        "decision_origin": "deterministic_rank_margin_gate",
+        "not_a_model_generated_semantic_explanation": true
+      },
+      "evaluation_origin": "Published handoff ZIP checkpoint"
     },
     {
       "sample_id": "novel-78d36c59db8687a5aa2854ef-p09s01",
@@ -263,8 +426,44 @@ Mở mục dưới để xem/copy dữ liệu cho application. Không cần tả
         "latency_ms": 277.1247640000638
       },
       "inspection_note": "Bỏ cụm “Hơn nữa”. Đây là rút gọn từ nối, chưa chứng minh câu tốt hơn.",
-      "evaluation": null,
-      "evaluation_status": "not_scored_in_this_addendum"
+      "evaluation": {
+        "rank_score": -0.42837584018707275,
+        "fluency_delta_proxy": 0.06637215614318848,
+        "semantic_preservation_proxy": 0.7760633826255798,
+        "grammar_score": null,
+        "evaluator_version": "7b45b3a236b099d7",
+        "context_used": false,
+        "human_validated": false,
+        "label_origin": "automatic_proxy_and_legacy_inferred_preference",
+        "score_contract": "raw rank; fluency=NLL(source)-NLL(candidate) proxy; semantic=frozen teacher cosine proxy; no 0-100 human calibration",
+        "latency_seconds_per_pair": 0.04793571666656741,
+        "latency_scope": "model_forward_excludes_tokenization"
+      },
+      "evaluation_status": "scored_with_identity_comparison",
+      "identity_comparison": {
+        "rank_score": -0.37272894382476807,
+        "fluency_delta_proxy": 0.06384243071079254,
+        "semantic_preservation_proxy": 0.7628244757652283,
+        "grammar_score": null,
+        "evaluator_version": "7b45b3a236b099d7",
+        "context_used": false,
+        "human_validated": false,
+        "label_origin": "automatic_proxy_and_legacy_inferred_preference",
+        "score_contract": "raw rank; fluency=NLL(source)-NLL(candidate) proxy; semantic=frozen teacher cosine proxy; no 0-100 human calibration",
+        "latency_seconds_per_pair": 0.04793571666656741,
+        "latency_scope": "model_forward_excludes_tokenization"
+      },
+      "decision": {
+        "action": "keep_original",
+        "decision_vi": "Giữ câu gốc",
+        "reason_vi": "Điểm xếp hạng phương án thấp hơn hoặc bằng câu gốc; đồng thời không vượt ngưỡng gate.",
+        "selected_text": "Hơn nữa Tần Trường Sinh cũng đã để Vương Ngũ đến phường thị vài lần.",
+        "rank_margin": -0.05564689636230469,
+        "gate_threshold": 1000000000.0,
+        "decision_origin": "deterministic_rank_margin_gate",
+        "not_a_model_generated_semantic_explanation": true
+      },
+      "evaluation_origin": "Published handoff ZIP checkpoint"
     },
     {
       "sample_id": "novel-34ba277e8c6f44f9c5601bd0-p07s01",
@@ -283,22 +482,22 @@ Mở mục dưới để xem/copy dữ liệu cho application. Không cần tả
       },
       "inspection_note": "LỖI MẤT Ý: bỏ mục đích “muốn thu thập về tặng cho mẹ”. Không nên chấp nhận output này.",
       "evaluation": {
-        "rank_score": -0.5230730175971985,
-        "fluency_delta_proxy": 0.07577066123485565,
-        "semantic_preservation_proxy": 0.872217059135437,
+        "rank_score": -0.523073136806488,
+        "fluency_delta_proxy": 0.07577069848775864,
+        "semantic_preservation_proxy": 0.8722171187400818,
         "grammar_score": null,
         "evaluator_version": "7b45b3a236b099d7",
         "context_used": false,
         "human_validated": false,
         "label_origin": "automatic_proxy_and_legacy_inferred_preference",
         "score_contract": "raw rank; fluency=NLL(source)-NLL(candidate) proxy; semantic=frozen teacher cosine proxy; no 0-100 human calibration",
-        "latency_seconds_per_pair": 0.06898980000005395,
+        "latency_seconds_per_pair": 0.04793571666656741,
         "latency_scope": "model_forward_excludes_tokenization"
       },
-      "evaluation_status": "scored_from_published_handoff_checkpoint",
+      "evaluation_status": "scored_with_identity_comparison",
       "identity_comparison": {
-        "rank_score": -0.2920582890510559,
-        "fluency_delta_proxy": 0.0627933144569397,
+        "rank_score": -0.29205816984176636,
+        "fluency_delta_proxy": 0.06279334425926208,
         "semantic_preservation_proxy": 0.8598604798316956,
         "grammar_score": null,
         "evaluator_version": "7b45b3a236b099d7",
@@ -306,11 +505,21 @@ Mở mục dưới để xem/copy dữ liệu cho application. Không cần tả
         "human_validated": false,
         "label_origin": "automatic_proxy_and_legacy_inferred_preference",
         "score_contract": "raw rank; fluency=NLL(source)-NLL(candidate) proxy; semantic=frozen teacher cosine proxy; no 0-100 human calibration",
-        "latency_seconds_per_pair": 0.06898980000005395,
+        "latency_seconds_per_pair": 0.04793571666656741,
         "latency_scope": "model_forward_excludes_tokenization"
       },
       "rank_margin_deleted_minus_identity": -0.23101472854614258,
-      "evaluation_origin": "Published handoff ZIP checkpoint"
+      "evaluation_origin": "Published handoff ZIP checkpoint",
+      "decision": {
+        "action": "keep_original",
+        "decision_vi": "Giữ câu gốc",
+        "reason_vi": "Điểm xếp hạng phương án thấp hơn hoặc bằng câu gốc; đồng thời không vượt ngưỡng gate.",
+        "selected_text": "Cô bé thấy huyết liên hoa rất đẹp, lại chưa từng thấy bao giờ, muốn thu thập về tặng cho mẹ, nên mới lên tiếng.",
+        "rank_margin": -0.23101496696472168,
+        "gate_threshold": 1000000000.0,
+        "decision_origin": "deterministic_rank_margin_gate",
+        "not_a_model_generated_semantic_explanation": true
+      }
     }
   ]
 }
