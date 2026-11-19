@@ -6,7 +6,7 @@
 
 ## Bắt đầu ở đây
 
-**Sample output chung một file:** [Xem câu gốc → output có đánh dấu thay đổi → điểm evaluator và JSON đầy đủ](examples/SAMPLE_OUTPUT.md).
+**Sample output chung một file:** [Xem câu gốc → output có đánh dấu thay đổi → điểm evaluator và JSON đầy đủ](examples/SAMPLE_OUTPUT.md). File hi?n c? **30 v? d? (20 thay ??i, 10 gi? nguy?n)**, ??u c? quy?t ??nh ti?ng Vi?t v? c?u cu?i c?ng.
 
 1. Tải **[gói đủ cả hai model ở Release v1.0.0](https://github.com/Deyuhnat/NLB/releases/tag/v1.0.0)**, chọn `BAN_GIAO_VISP_VA_EVALUATOR_20261118.zip` (1,27 GB).
 2. Giải nén vào thư mục mới, cài Python theo phần “Chạy trên máy nhận” bên dưới.
