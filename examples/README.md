@@ -1,5 +1,7 @@
 # Sample output thật: ViSP → evaluator
 
+**Muốn xem thay đổi rõ hơn? [Xem 3 ví dụ có sửa, gồm cả một lỗi mất ý](CHANGED_OUTPUTS.md).**
+
 Ba câu dưới đây lấy từ lượt sinh ViSP trên CPU đã lưu; evaluator được chạy thật trên CPU để chấm các cặp này. Không chỉnh sửa câu trả về để làm ví dụ đẹp hơn. Đây là ví dụ định dạng và hành vi, **không phải benchmark chất lượng độc lập**.
 
 **[Xem JSON đầy đủ cho application](sample_output.json)** · [Hướng dẫn chạy](../README.md)
