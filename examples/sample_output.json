@@ -1,0 +1,93 @@
+{
+  "description": "Real stored ViSP CPU generation outputs plus actual evaluator CPU scoring; interface examples, not an independent quality benchmark.",
+  "generator_output_origin": "visp_finetune/reports/local_reload_predictions.jsonl",
+  "source_origin": "visp_finetune/data/inference_example.jsonl",
+  "evaluator_scored_at": "2026-11-19T09:47:07.548590+07:00",
+  "device": "cpu",
+  "generator_sha256": "db9ff2cef0885c53e5e042c437ed4d7adf7b8bce0e0d0a89fd29ac5ac99dbebd",
+  "evaluator_encoder_sha256": "1210ff44e553f923f07ef93359dfd542636c6a0217729877287b36289a481473",
+  "human_validated": false,
+  "samples": [
+    {
+      "sample_id": "novel-03782e62ee9dd907a087eeac-p01s01",
+      "source": "Tần Trường Sinh hiểu rất rõ, một khi mối liên hệ giữa hai người bị phát giác, không chỉ thân phận hóa thân bị bại lộ, mà ngay cả bí mật của bản thân hắn cũng sẽ không còn chỗ dung thân.",
+      "candidate": "Tần Trường Sinh hiểu rất rõ, một khi mối quan hệ giữa hai người bị phát giác, không chỉ thân phận hóa thân bị bại lộ, mà ngay cả bí mật của bản thân hắn cũng sẽ không còn chỗ dung thân.",
+      "changed": true,
+      "generator": {
+        "system_id": "visp_full",
+        "raw_output": "Tần Trường Sinh hiểu rất rõ, một khi mối quan hệ giữa hai người bị phát giác, không chỉ thân phận hóa thân bị bại lộ, mà ngay cả bí mật của bản thân hắn cũng sẽ không còn chỗ dung thân.",
+        "status": "ok",
+        "fallback": false,
+        "error": null,
+        "latency_ms": 3537.3416999999563
+      },
+      "evaluation": {
+        "rank_score": 0.03741016238927841,
+        "fluency_delta_proxy": 0.06693083047866821,
+        "semantic_preservation_proxy": 0.8051238059997559,
+        "grammar_score": null,
+        "evaluator_version": "7b45b3a236b099d7",
+        "context_used": false,
+        "human_validated": false,
+        "label_origin": "automatic_proxy_and_legacy_inferred_preference",
+        "score_contract": "raw rank; fluency=NLL(source)-NLL(candidate) proxy; semantic=frozen teacher cosine proxy; no 0-100 human calibration",
+        "latency_seconds_per_pair": 0.13823243333354185,
+        "latency_scope": "model_forward_excludes_tokenization"
+      }
+    },
+    {
+      "sample_id": "novel-03782e62ee9dd907a087eeac-p02s01",
+      "source": "Đệ tử tạp dịch qua lại đông đúc, chỉ có cắt đứt hoàn toàn liên hệ giữa bản thể và hóa thân mới có thể tránh né rủi ro ở mức tối đa.",
+      "candidate": "Đệ tử tạp dịch qua lại đông đúc, chỉ có cắt đứt hoàn toàn liên hệ giữa bản thể và hóa thân mới có thể tránh né rủi ro ở mức tối đa.",
+      "changed": false,
+      "generator": {
+        "system_id": "visp_full",
+        "raw_output": "Đệ tử tạp dịch qua lại đông đúc, chỉ có cắt đứt hoàn toàn liên hệ giữa bản thể và hóa thân mới có thể tránh né rủi ro ở mức tối đa.",
+        "status": "ok",
+        "fallback": false,
+        "error": null,
+        "latency_ms": 2429.046499999913
+      },
+      "evaluation": {
+        "rank_score": -0.3314342796802521,
+        "fluency_delta_proxy": 0.06568525731563568,
+        "semantic_preservation_proxy": 0.8544645309448242,
+        "grammar_score": null,
+        "evaluator_version": "7b45b3a236b099d7",
+        "context_used": false,
+        "human_validated": false,
+        "label_origin": "automatic_proxy_and_legacy_inferred_preference",
+        "score_contract": "raw rank; fluency=NLL(source)-NLL(candidate) proxy; semantic=frozen teacher cosine proxy; no 0-100 human calibration",
+        "latency_seconds_per_pair": 0.13823243333354185,
+        "latency_scope": "model_forward_excludes_tokenization"
+      }
+    },
+    {
+      "sample_id": "novel-03782e62ee9dd907a087eeac-p03s01",
+      "source": "Tần Trường Sinh tâm thần khẽ động, lấy ra một bộ y phục tạp dịch đã chuẩn bị sẵn đưa đến trước mặt hóa thân: \"Đây là y phục của ngươi, phòng của ngươi ở cách đây mười dặm về phía tây!\"",
+      "candidate": "Tần Trường Sinh tâm thần khẽ động, lấy ra một bộ y phục tạp dịch đã chuẩn bị sẵn đưa đến trước mặt hóa thân: \"Đây là y phục của ngươi, phòng của ngươi ở cách đây mười dặm về phía tây!\"",
+      "changed": false,
+      "generator": {
+        "system_id": "visp_full",
+        "raw_output": "Tần Trường Sinh tâm thần khẽ động, lấy ra một bộ y phục tạp dịch đã chuẩn bị sẵn đưa đến trước mặt hóa thân: \"Đây là y phục của ngươi, phòng của ngươi ở cách đây mười dặm về phía tây!\"",
+        "status": "ok",
+        "fallback": false,
+        "error": null,
+        "latency_ms": 3916.641800000093
+      },
+      "evaluation": {
+        "rank_score": 0.17851196229457855,
+        "fluency_delta_proxy": 0.061544548720121384,
+        "semantic_preservation_proxy": 0.5856443643569946,
+        "grammar_score": null,
+        "evaluator_version": "7b45b3a236b099d7",
+        "context_used": false,
+        "human_validated": false,
+        "label_origin": "automatic_proxy_and_legacy_inferred_preference",
+        "score_contract": "raw rank; fluency=NLL(source)-NLL(candidate) proxy; semantic=frozen teacher cosine proxy; no 0-100 human calibration",
+        "latency_seconds_per_pair": 0.13823243333354185,
+        "latency_scope": "model_forward_excludes_tokenization"
+      }
+    }
+  ]
+}

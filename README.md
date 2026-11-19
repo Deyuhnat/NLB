@@ -6,6 +6,8 @@
 
 ## Bắt đầu ở đây
 
+**Có sample output chạy thật:** [Xem input → output → điểm evaluator](examples/README.md) hoặc [JSON đầy đủ để tích hợp application](examples/sample_output.json).
+
 1. Tải **[gói đủ cả hai model ở Release v1.0.0](https://github.com/Deyuhnat/NLB/releases/tag/v1.0.0)**, chọn `BAN_GIAO_VISP_VA_EVALUATOR_20261118.zip` (1,27 GB).
 2. Giải nén vào thư mục mới, cài Python theo phần “Chạy trên máy nhận” bên dưới.
 3. Chạy ba bước: sinh câu → ghép câu gốc/phương án → chấm điểm. Không cần training lại để inference.
